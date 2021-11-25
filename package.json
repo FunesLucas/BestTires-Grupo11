@@ -1,0 +1,33 @@
+{
+  "name": "grupo_11_besttires",
+  "version": "1.0.0",
+  "description": "Venta de neumáticos multimarca para las categorías: autos, camionetas, utilitarios y motos.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvelazquez719/Grupo_11_BestTires.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvelazquez719/Grupo_11_BestTires/issues"
+  },
+  "homepage": "https://github.com/mvelazquez719/Grupo_11_BestTires#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.2",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.12.0-alpha.1"
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("partials/head") -%>
+
+    <body>
+        <div class=container>
+            <%- include("partials/header") -%>
+                <div class="banner">
+                    <div class="buscador">
+                        <input type="search" name="busquedaproductos" placeholder="Buscar marcas, medidas...">
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <section>
+                    <a href="#"><img src="./img/fate.png" class="marcas"> </a>
+                    <a href="#"><img src="./img/brig.jpg" class="marcas"></a>
+                    <a href="#"><img src="./img/Michelin.png" class="marcas"></a>
+                    <a href="#"><img src="./img/pirelli.png" class="marcas"></a>
+                    <a href="#"><img src="./img/goodyear.jpg" class="marcas"></a>
+
+                </section>
+                <div class="destacados">
+                    <h3>DESTACADOS</h3>
+                </div>
+                <div class="productos">
+                    <a href="#">
+                        <article class="box-products">
+                            <img width="200" height="280" class="imagen" src="./img/ofer-mich.webp">
+                            <ul>
+                                <div class="juntos">
+                                    <li class="precio">$49.634</li>
+                                    <li class="descuentos">15% off</li>
+                                </div>
+                                <li class="descripcion">Neumático Michelin Primacy 4 225/50 R17 </li>
+
+                            </ul>
+                            
+
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="box-products">
+                            <img width="200" height="280" class="imagen" src="./img/ofer-pir.webp">
+                            <ul>
+                                <div class="juntos">
+                                    <li class="precio">$9.836</li>
+                                    <li class="descuentos">25% off</li>
+                                </div>
+                                <li class="descripcion">Neumático Pirelli Scorpion 205/65 R15 </li>
+
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="box-products">
+                            <img width="200" height="280" class="imagen" src="./img/ofer-fate.webp">
+                            <ul>
+                                <div class="juntos">
+                                    <li class="precio">$12.078</li>
+                                    <li class="descuentos">20% off</li>
+                                </div>
+                                <li class="descripcion"> Neumático Fate Prestiva 175/70 R13 82 </li>
+
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="box-products">
+                            <img width="200" height="280" class="imagen" src="./img/ofer-good.webp">
+                            <ul>
+                                <div class="juntos">
+                                    <li class="precio">$20.836</li>
+                                    <li class="descuentos">10% off</li>
+                                </div>
+                                <li class="descripcion">Neumático Goodyear Assurance 205/65 R15 </li>
+
+                            </ul>
+                        </article>
+                    </a>
+                </div>
+        </div>
+        <%- include("partials/footer") -%>
+
+    </body>
+
+</html>

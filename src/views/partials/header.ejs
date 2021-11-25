@@ -1,0 +1,63 @@
+<header>
+
+    <nav class="nav-main">
+        <a href="#"></a><img src="../img/logo.jpg" class="logo"></a>
+        <a kref="#" class="hamburguer-button">
+            <i class=" fas fa-bars "> </i>
+        </a>
+        <ul class="nav-menu-left">
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a href="/products">Productos</a>
+            </li>
+            <li>
+                <a href="/contacto">Contacto</a>
+            </li>
+        </ul>
+        <ul class="carrito">
+            <li>
+                <a href="/carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
+        </ul>
+
+
+        <% if (isLogged) { %>
+            <ul class="navbar-nav-login">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <a href="/userProfile"><img src="../img/<%= locals.userLogged.avatar %>" width="40"
+                                style="border-radius: 100%;"></a>
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                        <a class="dropdown-item" href="/logout/">// Cerrar Sesion <%= locals.userLogged.firstName %>
+                        </a>
+                    </ul>
+
+                <li>
+                    <a href="/cargaProduc"><i class="fas fa-cloud-upload-alt"></i>Cargar Producto</a>
+                </li>
+                </li>
+            </ul>
+            <% } else { %>
+                <ul class="nav-menu-right">
+                    <li>
+                        <a href="/login"> <i class="fas fa-sign-in-alt"></i>Iniciar Sesión </a>
+                    </li>
+                    <li>
+                        <a href="/register"><i class="far fa-address-card"></i>Registrate </a>
+                    </li>
+
+
+                </ul>
+                <% } %>
+    </nav>
+</header>

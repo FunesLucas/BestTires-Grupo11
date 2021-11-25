@@ -1,0 +1,26 @@
+[
+ {
+  "id": 1,
+  "firstName": "Lucas",
+  "lastName": "Funes",
+  "email": "funeslucas@outlook.com",
+  "password": "$2a$10$mQdSwBaesU72rEz.W98ECuAwe8sq/FM0oRk1lrLabRhjSzm2Q48MG",
+  "avatar": "img-1634416875073-542523604WIN_20210628_10_29_13_Pro.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "pepito",
+  "lastName": "don",
+  "email": "don@pepito.com",
+  "password": "$2a$10$pmRzjWlI9f2S0d.J/1cjje/FsI2rN77y3ILoritA5utaIOdbcnZU6",
+  "avatar": "img-1634843843368-443460131descarga.png"
+ },
+ {
+  "id": 3,
+  "firstName": "matias",
+  "lastName": "federico",
+  "email": "mati@outlook.com",
+  "password": "$2a$10$ZrhZTseaDdQtgbRAdFbVZ.lPFnRWUFH/vH8xgju3FIGz9nDBRo5de",
+  "avatar": "img-1634844138399-995977744descarga.png"
+ }
+]

@@ -1,0 +1,17 @@
+services:
+  mysql:
+   image: mysql:5.7
+   environment:
+     MYSQL_DATABASE: 'mydb'  
+     MYSQL_USER: 'besttires'
+     MYSQL_PASSWORD: '1234'
+     MYSQL_ROOT_PASSWORD: '1234'
+     MYSQL_ROOT_PASSWORD: '1234'
+     
+   volumes: 
+       - ./volumenes/mysql:/var/lib/mysql 
+   expose:
+       - 3307 
+   ports: 
+       - 3307:3306
+

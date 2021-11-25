@@ -1,0 +1,627 @@
+* {    
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+body {
+   background-color: #0d0c0d;
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%237e0606' fill-opacity='0.58'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+   font-size: 16px;
+   font-family: 'Prompt', sans-serif;
+   display: flex;
+  flex-direction:column;
+  min-height: 100vh;
+
+}
+
+a {
+   text-decoration: none;
+}
+ul {
+   list-style: none;
+}
+.container {
+  flex: 1; 
+}
+/*menu*/
+
+.nav-main {
+   font-size: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 100px;
+   padding: 20px 0;
+   background-color: rgb(255, 255, 255);
+}
+.logo {
+   width: 200px;
+}
+.hamburguer-button {
+   color:rgb(68, 3, 3);
+   font-size: 25px;
+   display:none;
+}
+.bodyuser {
+   background-color: white;
+   background-image: none;
+}
+
+
+/*menu left*/
+
+.nav-menu-left {
+   display: flex;
+   flex-direction: row;
+   flex: 1;
+   margin-left: 150px; 
+}
+.nav-menu-left li {
+   padding: 5px;  
+}
+.nav-menu-left li a {
+   padding: 10px 20px;
+   margin: 40px;
+   color: rgb(68, 3, 3);
+}
+.nav-menu-left li a:hover {
+   opacity: 0.5;
+}
+
+/*carrito*/
+
+.carrito {
+   display: flex;
+   flex : 1;
+  
+   margin-left: 40px;
+}
+.carrito i{
+   color: rgb(68, 3, 3);
+   font-size: 30px;  
+}
+.carrito i:hover {
+   opacity: 0.5;
+}
+.navbar-nav-login{
+   padding-right: 50px;
+}
+/*menu rigth*/
+.nav-menu-right{
+   display: flex;
+   flex-direction: column;
+   margin-right: 20px;
+}
+.nav-menu-right a{
+   color: rgb(68, 3, 3);
+}
+.nav-menu-right i{
+   margin: 5px;
+}
+.nav-menu-right a:hover {
+opacity: 0.5;
+}
+
+/*header*/
+.banner {
+   display: flex;
+   color:white;
+   background: url("../img/banner.jpeg") no-repeat center bottom/cover;
+   width: 100%;
+   height: 200px;
+   justify-content: center;
+   align-items: center;
+}
+.buscador { 
+   font-size: 25px;
+   display: flex;     
+   border: solid 4px rgb(68, 3, 3);
+   
+}
+.buscador input {
+   width: 400px;
+   color:rgb(68, 3, 3);
+   border: solid 2px #ffffff;
+   border-radius: 0;
+   -webkit-appearance: none;
+}
+.buscador a {
+   color: rgb(68, 3, 3);
+   padding: 5px 10px;
+   background-color: #ffffff;
+   
+}
+.buscador a:hover {
+   color:#ffffff;
+   background-color: rgb(68, 3, 3);
+}
+
+/*section*/
+
+section {
+   display: flex;
+   justify-content: space-around;
+}
+section a{
+   display: flex;
+   width: 100px;
+   height: 50px;
+   margin-top: -50px;
+   margin-left: 50px;
+}
+section a img {
+   width: 100%;
+   height: auto;
+}
+.marcas {
+   background-color: #ffffff;
+}
+.destacados {
+   background-color: #ffffff;
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.74' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+   margin: 10px 0;
+}
+.destacados h3 {
+   font-size: 28px;
+   text-align: center;
+   color: rgb(68, 3, 3);
+   font-weight: bold;   
+}
+
+
+/*productos*/
+
+.productos {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;  
+}
+.box-products {    
+   background-color: white;
+   width: 250px;
+   height: 400px;
+   margin: auto;    
+   align-items: center;
+   margin: 5px;
+   border-radius: 5px;
+   padding: 20px;
+}
+.box-products ul {
+   border-top: 2px solid rgb(68, 3, 3);
+}
+.productos a:hover {
+   opacity: 0.8;  
+}
+.juntos {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+.precio {
+   font-size: 20px;
+   color:#fc000d;
+}
+.descuentos {
+   font-size: 18px;
+   color: rgb(3, 197, 3);
+}
+.descripcion {
+   font-size: 18px;
+   color: rgb(136, 132, 132);
+   text-align: center;
+}
+/*Product ID*/
+.proDet{   
+   background-color: white;
+    width: 100%;
+   justify-content: space-around;
+   }
+.productsDetails {
+   display: flex;
+   justify-content: space-around;
+}
+.descrip {
+   list-style: none;
+  
+}
+.botones {
+   display: flex;
+   flex-direction: column;
+}
+.botones a{
+   border: 2px solid black;
+   
+   margin: 6px;
+   padding: 4px;
+   text-align: center;
+   color: black;
+}
+.botones a:hover {
+   background-color: green;
+   color: white;
+
+}
+.eliminar input {
+   background-color: rgb(255, 255, 255) ;
+   color: rgb(197, 6, 6);
+   
+   font-weight: bold;
+   padding: 5px;
+}
+.eliminar input:hover {
+   background-color: rgb(197, 6, 6) ;
+   color:white;   
+}
+/*usuarios*/
+
+.titulousuario{
+   padding: 20px;
+}
+
+/*footer*/
+
+footer {
+   margin-top: 10px;
+   padding: 15px;
+   background-color: #000000;
+   color: rgb(136, 132, 132);
+   text-align: center;
+   font-size: 11px;
+   list-style: none;
+   width: 100%;
+   height: 130px;
+}
+.pie {
+   padding: 10px;
+   display: flex;
+   justify-content: space-around;
+}
+.pie a {
+   color: rgb(136, 132, 132);
+}
+.pie a:hover {
+   color:brown;
+}
+.social-list {
+   display: flex;
+   background-color: #ffffff;
+   justify-content: center;
+}
+.social-list a {
+   color: black;
+   font-size: 30px;
+   margin: 0 30px;
+}
+.fa-instagram:hover {
+   color:brown;
+}
+.fa-facebook:hover {
+   color:darkblue;
+}
+.fa-twitter:hover {
+   color:darkcyan;
+}
+.fa-whatsapp:hover {
+   color:darkgreen;
+}
+
+
+/*Register.html*/
+
+.form{
+   
+   margin: 70px 0;
+   display: flex;
+   justify-content: center;
+}
+.main-form {
+   border: 2px solid white;
+   width: 60%;
+   text-align: center;
+   border-radius: 5px;
+   background-color:rgb(225, 225, 225); 
+}
+.main-form .tit-form{
+   color:black;
+}
+
+.main-form .subtit-form{
+   color:black); 
+   margin: 20px;
+}
+.main-form input{
+   margin: 20px;
+   padding: 7px;
+   
+}
+.main-form button{
+   margin: 20px;
+   padding: 7px;
+   width: 37%;
+}
+
+/*login*/
+
+.login-content{width:80%;
+   display: block;
+   margin:none;
+}
+.button-register a{
+   color:#000000;
+   font-weight: bold;
+}
+.button-register button:hover{
+  background-color: rgb(136, 132, 132)
+}
+.subtit-form {
+   color:black;
+}
+
+
+/*products*/
+
+.big-container{
+   padding: 10px;
+   display: flex;
+   background-color: white;
+   width: 100%; 
+   border: none;
+   justify-content: space-around;
+   box-sizing: border-box;
+   }
+
+.right-container{
+   padding: 5px;
+   width: 75%;
+   display: flex; 
+   border:none;
+   flex-wrap: wrap;
+   box-sizing: border-box; 
+ }
+
+
+ /*carrito*/
+
+.changuito {
+   border: 1px white solid;
+   padding: 20px;
+   background-color: black;
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   margin-top: 50px;
+   max-width: 800px;
+   text-align: center;
+   margin-bottom: 50px;
+   
+}
+.tit{
+   color: white;
+   text-align: start;
+}
+ .articulo img{
+    width: 100px;
+ }
+ .name{
+    padding: 10px;
+    max-width: 300px;
+ }
+ .element {
+    display: flex;
+    border-top: white 4px solid;
+    padding: 20px;
+    width: 100%;
+    flex-direction: column;
+ }
+ .element img{
+    width: 100px;
+ }
+ .element .name{
+    color: white;
+ }
+ .select-cant{
+    height: 54px;
+    border: 2px solid white;
+    padding: 10px;
+    width: 10%;
+    min-width: 70px;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+ .cant-men {
+    width: 10px;
+ }
+ .cant-pro{
+    
+    width: 55%;
+    margin: 0 -7px;
+ }
+ .boxxx{
+    padding: 0 20px;
+ }
+ .precio-p{
+    color: white;
+    padding-bottom: 50px;
+    
+ }
+ .button-delete{
+    padding:5px 10px;
+ }
+ .produc-compra{
+    display: flex;
+    margin-right: 40px;
+ }
+ 
+
+
+/*contacto*/
+
+.contacto {
+   display: flex;
+   background-color: #ffffff;
+   justify-content: center;
+   margin: 70px 0;
+   width: 100%;
+   height: 200px;
+   flex-wrap: wrap;
+   align-items: center;
+}
+
+.contacto a {
+   color: black;
+   font-size: 40px;
+   margin: 15px 30px;
+}
+
+/*register*/
+.cargaP{
+   display: flex;
+   justify-content: center;
+}
+.formulario {
+   background-color:rgb(225, 225, 225); 
+   width: 100vh;
+   margin:5vh;
+   padding: 5vh;
+   text-align: center;
+}
+.input1 {
+   display: flex;
+   justify-content: center;
+}
+.input1 input {
+   width: 70%;
+   
+}
+.errores {
+   color:red;
+}
+
+.datospersonales input{
+   padding: 10px 30px;
+   border: solid black 1px;
+}
+
+/*carga producto*/
+
+.datosProduct {
+  
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   
+}
+.datosProduct input {
+   margin: 5px;
+   text-align: center; 
+
+}
+
+.labelform {  
+   font-size: 15px;
+   padding: 10px 30px;   
+   
+   
+}
+.exam input {
+   background-color: #ffffff;
+}
+
+
+.button-register a{
+   color:rgba(0, 0, 0, 0.7);
+   padding: 20px 40px;
+   text-decoration: none;
+}
+
+
+/*media-queris*/
+
+@media (max-width: 361px){
+   .contacto {
+      height: 400px;
+       
+    }
+    
+    .contacto a {
+       font-size: 40px;
+ 
+    }
+   
+}
+@media (min-width: 361px){
+   .element{
+      flex-direction: column;
+   }
+   .changuito{
+      width: 80%;
+      text-align: center;
+   }
+   .select-cant{
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+   }
+   .precio-p{
+      width: initial;
+   }
+   .contacto {
+      height: 400px;
+       
+    }
+    
+    .contacto a {
+       font-size: 40px;
+ 
+    }
+}
+
+@media (min-width: 769px){
+   .element{
+      flex-direction: row;
+      min-width: 0;
+   }
+   .changuito{
+      width: 80%;
+   }
+   .precio-p{
+      width: 100px;
+   }
+   
+}
+
+@media (max-width: 1200px){
+   .nav-main {
+   justify-content: center;  
+   flex-direction: column;  
+   }
+   .logo {
+       width: 150px;
+   }
+   .hamburguer-button {
+      display: block;
+   }
+   
+   .nav-menu-left {
+     display: none;
+   }
+   .carrito {
+      display: none;
+   }
+   section {
+      display: none;
+   }     
+   .nav-menu-right {
+      display: none;
+   }
+   .buscador input {
+      width: 150px;
+
+   }/*agregado productDetail*/.big-container{flex-direction: column;}.left-container{width: 100%;} .right-container{width: 100%;}
+}
+
+
+

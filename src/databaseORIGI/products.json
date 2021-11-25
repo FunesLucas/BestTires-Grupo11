@@ -1,0 +1,52 @@
+[
+    {
+        "id": 10,
+        "ancho": "185",
+        "perfil": "60",
+        "rodado": "15",
+        "marca": "Neumaticos Pirelli X2 COMBO",
+        "modelo": "P1 CINT",
+        "precio": "42950",
+        "img": "img-1633034875462-339771123combo x2 Pirelli.jpg"
+    },
+    {
+        "id": 4,
+        "ancho": "180",
+        "perfil": "70",
+        "rodado": "13",
+        "marca": "Neumaticos Fate COMBO x2",
+        "modelo": "MaxiSport",
+        "precio": "23801",
+        "img": "img-1633035289653-645954001maxisport.jpg"
+    },
+    {
+        "id": 5,
+        "ancho": "235",
+        "perfil": "75",
+        "rodado": "15",
+        "marca": "Bridgestone",
+        "modelo": "AT696",
+        "precio": "28769",
+        "img": "img-1633035444777-226917995Bridgestone.jpg"
+    },
+    {
+        "id": 6,
+        "ancho": "265",
+        "perfil": "65",
+        "rodado": "17",
+        "marca": "Neumatico Pirelli ",
+        "modelo": "Scorpion ATR",
+        "precio": "47888",
+        "img": "img-1633035530920-156605687escorpin neumatico.jpg"
+    },
+    {
+        "id": 7,
+        "ancho": "500",
+        "perfil": "75",
+        "rodado": "15",
+        "marca": "Neumatico Firestone",
+        "modelo": "Destination",
+        "precio": "30901",
+        "img": "img-1633035609164-794537526firestone ultima.jpg"
+    }
+]

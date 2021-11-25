@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("partials/head") -%>
+
+    <body>
+        <div class=container>
+            <%- include("partials/header") -%>
+                <main class="cargaP">
+                    <div class="formulario">
+                        <h2 class="tit-form">Editar Producto</h2>
+                        <form action="/editProduc/<%= products.id %>?_method=PUT" method="POST" class="Carga-product">
+                            <div class="datosProduct">
+                                
+                                <input type="text" required placeholder="Ancho" name="detalleProduct" value="<%= products.ancho %>">
+                                <input type="text" required placeholder="Perfil" name="ProfileProduct" value="<%= products.perfil %>">
+                                <input type="text" required placeholder="Rodado" name="Rolled" value="<%= products.rodado %>">
+                                <input type="text" required placeholder="Marca" name="mark" value="<%= products.marca %>">
+                                <input type="text" required placeholder="Modelo" name="model" value="<%= products.modelo %>">
+                                <input type="text" required placeholder="Precio" name="priceProduct" value="<%= products.precio %>">
+                                <div class="labelform">
+                                    <label>Imagen del Producto</label>
+                                </div>
+                                <div class="exam">
+                                    <input type="file" name="img" accept=".jpg">
+                                </div>
+
+                                <div class="button-register">
+                                    <input type="submit" value="Guardar Producto" class="btnEnviar">
+                                    <button type="reset"><a href="/">Cancelar</a></button>
+
+                                </div>
+                                                              
+                                    
+                                
+
+                            </div>   
+                        </form>
+                    </div>
+                </main>
+        </div>
+        <%- include("partials/footer") -%>
+
+    </body>
+
+</html>

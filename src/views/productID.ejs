@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("partials/head") -%>
+
+    <body>
+        <div class=container>
+            <%- include("partials/header") -%>
+                <hr>
+                <main>
+                    <div class="proDet">
+                                <h3>DETALLE DEL PRODUCTO</h3>
+                            
+
+                            <div class="productsDetails">
+
+                                <img width="200" height="280" class="imagen" src="../img/<%= product.img %>">
+                                <div class="descrip">
+                                    <li>Marca: <%= product.marca %></li>
+                                    <li>Modelo: <%= product.modelo %></li>
+                                    <li>Rodado: <%= product.rodado %></li>
+                                    <li>Ancho: <%= product.ancho %></li>
+                                    <li>Perfil: <%= product.perfil %></li>
+                                    <li>Precio: <%= product.precio %></li>
+                                    
+                                </div>
+                                <div class="botones">
+                                    <a href="#">Comprar</a>
+                                    <a href="/editProduc/<%= product.id %>">Editar</a>
+                                   
+                                </div>
+                                <div class= eliminar>
+
+                                    <form method="POST"  action="/delete/<%= product.id %>?_method=DELETE">
+                                        <input type="submit" value="Eliminar producto" name="delete" class="btnForm">
+                                    </form>
+                                    </div>
+                            </div>
+                    </div>
+                </main>
+
+                
+        </div>
+        <%- include("partials/footer") -%>
+
+    </body>
+
+</html>

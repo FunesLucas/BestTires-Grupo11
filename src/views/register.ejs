@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("partials/head") -%>
+
+    <body>
+        <div class=container>
+            <%- include("partials/header") -%>
+                <article class="form">
+
+                    <div class="main-form">
+
+                        <h2 class="tit-form">Registrate</h2>
+
+                        <h3 class="subtit-form">Completa tus datos</h3>
+
+                        <form action="/register" method="POST" class="registro-form" enctype="multipart/form-data">
+
+                            <div class="input1">
+
+                                <input type="text" placeholder="Nombre" name="nombre" value="<%= locals.oldData ? oldData.firstName : null  %>" >
+                                <input type="text" placeholder="Apellido" name="apellido" value="<%= locals.oldData ? oldData.lastName : null  %>">
+                              
+
+                            </div>
+
+                            <div class="input1">
+
+                                <input type="text" placeholder="Correo electronico" name="email" value="<%= locals.oldData ? oldData.email : null  %>">
+                                <input type="password" placeholder="Contraseña" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
+
+                            </div>
+
+                            <div>
+
+                                <div class="exam">
+                                    <label>Imagen de Perfil:</label>
+                                    <input type="file" name="avatar">
+                                </div>
+
+                            </div>
+
+                            <div class="button-register">
+                                <button type="submit">Enviar</button>
+                            </div>
+
+                            <% if (locals.errors && errors.firstName) { %>
+                                <p class="errores">
+                                    <%= errors.firstName.msg %>
+                                </p>
+                                <% } %>
+
+                                    <% if (locals.errors && errors.lastName) { %>
+                                        <p class="errores">
+                                            <%= errors.lastName.msg %>
+                                        </p>
+                                        <% } %>
+
+                                            <% if (locals.errors && errors.email) { %>
+                                                <p class="errores">
+                                                    <%= errors.email.msg %>
+                                                </p>
+                                                <% } %>
+
+                                                    <% if (locals.errors && errors.password) { %>
+                                                        <p class="errores">
+                                                            <%= errors.password.msg %>
+                                                        </p>
+                                                        <% } %>
+
+                                                        <% if (locals.errors && errors.img) { %>
+                                                            <p class="errores">
+                                                                <%= errors.img.msg %>
+                                                            </p>
+                                                            <% } %>
+                        </form>
+
+                    </div>
+                </article>
+
+        </div>
+        <%- include("partials/footer") -%>
+
+    </body>
+
+</html>

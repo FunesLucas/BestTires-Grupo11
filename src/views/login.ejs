@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("partials/head") -%>
+
+    <body>
+        <div class=container>
+            <%- include("partials/header") -%>
+            
+                <article class="form">
+                    <div class="main-form">
+
+                        <h3 class="subtit-form">Iniciar Sesión</h3>
+
+
+                        <form action="/login" method="POST" class="registro-form">
+
+                        <div>
+                            <input type="email" required placeholder="Nombre de usuario" name="nameUsers" required>
+                          
+                        </div>
+                        <% if (locals.errors && errors.email) { %>
+                            <p class = "errores">
+                            <%= errors.email.msg %>
+                            </p>
+                        <% } %>
+
+                        <div>
+                            <input type="password" placeholder="Contraseña" name="password" >
+                            <span class="feedback"></span>
+
+
+                        </div>
+
+                        <div class="button-register">
+                            <button type="submit">Ingresar</button>
+
+                        </div>
+                        <div>
+
+                            <a class="subtit-form" href="#"><span>¿Olvidó su contraseña?</span></a>
+
+                        </div>
+                    </form>
+                    </div>
+                </article>
+
+        </div>
+        <%- include("partials/footer") -%>
+
+    </body>
+
+</html>
