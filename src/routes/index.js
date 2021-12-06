@@ -8,16 +8,17 @@ const path = require ('path')
 const guestMiddleware = require ('../middleware/guestmidd');
 
 const {usuarios}= require('../controllers')
+const {productos}= require('../controllers')
 
 const {body} = require ('express-validator');
 const { createUsuario } = require('../model/usuarios');
 
 const validations = [
-    body('firstName').notEmpty().withMessage('Tienes que escribir un nombre'),
-    body('lastName').notEmpty().withMessage('Tienes que escribir un apellido'),
+    body('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('apellido').notEmpty().withMessage('Tienes que escribir un apellido'),
     body('email').notEmpty().withMessage('Tienes que escribir un correo electronico').bail().isEmail().withMessage('Debes escribir un formato de correo valido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('img').custom((value,{req}) => {
+    body('avatar').custom((value,{req}) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
         
@@ -47,7 +48,8 @@ router.get("/logout", usersController.logout )
 router.get("/detalleUsuario/:id", usuarios.detalleUsuario )
 router.put("/detalleUsuario/:id",upload.single('avatar'),validations, usuarios.editUsuario )
 
-router.get("/lista", usuarios.getUsuario )
+router.get("/lista", productos.getProductos )
+router.get("/listaUsuarios", usuarios.getUsuario )
 
 
 router.get("/contacto", usersController.contacto);

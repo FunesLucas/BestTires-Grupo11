@@ -1,88 +1,73 @@
 const {usuarioModel} = require("../model")
 const bcryptjs = ("bcrypts");
-
+const {validationResult} = require ('express-validator');
 const db = require("../database/models");
 const { response } = require("express");
 
+
+
 const usuariosController = {
 
-    getUsuario : async (req,res,next) => {
-        let id = 1
-        const respuesta = await usuarioModel.getUsuario(id)
+    getUsuario: async (req, res, next) => {
+        const respuesta = await usuarioModel.getUsuario()
         res.send(respuesta);
     },
 
-    profile :async (req, res, next) => {
-        let id = req.session.userLogged.id
-        const respuesta = await db.Usuarios.findByPk(id)
-        res.render ('userProfile', {user: respuesta})
+    profile: async (req, res, next) => {
+        let id = req.session.userLogged.ID
+        const respuesta = await db.usuarios.findByPk(id)
+        res.render('userProfile', { user: respuesta })
     },
 
     createUsuario: async (req, res, next) => {
-        
-       let  userToCreate = {
+        const resultValidation = validationResult(req)
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('register', {
+                errors: resultValidation.mapped(),  //<---- mapped ( vuelve el Array de errores a un objeto literal)
+                oldData: req.body,
+            });
+        }
+
+        let userToCreate = {
+            avatar: req.file.filename,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
-            password: req.body.password,
-            avatar: req.file.filename
-       }
+            password: req.body.password
+        }
 
         try {
-            
             const respuesta = await usuarioModel.createUsuario(userToCreate)
             res.redirect('/')
-
         } catch (error) {
             console.log(`fallo consulta a la base de datos ${error.message}`)
-        return []
+            return []
         }
-        
     },
+
     detalleUsuario: async (req, res, next) => {
-
-    
         let id = req.params.id
-        const respuesta = await db.Usuarios.findByPk(id)
-         res.render('detalleUsuario', {user: respuesta});
-         
+        const respuesta = await db.usuarios.findByPk(id)
+        res.render('detalleUsuario', { user: respuesta });
+
     },
 
-
-    
-
-
-
-    editUsuario: async (req,res,next) => {
-
+    editUsuario: async (req, res, next) => {
         console.log(req.body)
-        
-        
         try {
-            
             let id = req.params.id
-        const respuesta = await usuarioModel.editUsuario(id, req.body)
-        
-        
-
-            //let response = await  usuarioModel.editUsuario(respuesta)
-        }catch (error) {
+            const respuesta = await usuarioModel.editUsuario(id, req.body)
+        } catch (error) {
             console.log(`fallo consulta a la base de datos ${error.message}`)
             return []
         }
         res.redirect("/userProfile")
-      
     },
 
+    loginProcces: async (req, res) => {
+        let usuarioParaLogear = await usuarioModel.findByField('email', req.body.nameUsers);
 
-
-
-
-
-
-    loginProcces: async  (req,res) => {
-        let usuarioParaLogear = await usuarioModel.findByField('email',req.body.nameUsers);
-        
         if (usuarioParaLogear) {
             //let okPassword = bcryptjs.compareSync(req.body.password, usuarioParaLogear.password)
             if (req.body.password == usuarioParaLogear.password) {
@@ -91,27 +76,24 @@ const usuariosController = {
                 //console.log(req.session);   <-- Para mostrar session activa
                 return res.redirect('/')
             }
-  
-            return res.render ('login',{
-              errors: {
-                  email:{
-                      msg: 'Las credenciales son invalidas'
-                  }
-              }
-          })
-    
-        }
-        return res.render ('login',{
-          errors: {
-              email:{
-                  msg: 'No se encuentra registrado'
-              }
-          }
-      })
-      //console.log(req.session);
-      }
 
-    
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son invalidas'
+                    }
+                }
+            })
+        }
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'No se encuentra registrado'
+                }
+            }
+        })
+        //console.log(req.session);
+    }
 }
 
 
