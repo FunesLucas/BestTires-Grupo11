@@ -1,3 +1,4 @@
+const { response } = require("express");
 const db = require("../database/models")
 
 const productosModel = {
@@ -6,11 +7,21 @@ const productosModel = {
         try {
             const response = await db.productos.findAll()
             return response
-
         } catch (error) {
             console.log(`fallo consulta a la base de datos ${error.message}`);
         }
-    }
+    },
+
+    crearProductoProcces: async (unProducto) => {
+        try {
+            const response = await db.productos.create(unProducto)
+            return response
+        } catch (error) {
+            console.log(`fallo consulta a la base de datos ${error.message}`);
+        }
+    },
+
+   
 
 }
 

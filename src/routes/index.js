@@ -53,14 +53,15 @@ router.get("/listaUsuarios", usuarios.getUsuario )
 
 
 router.get("/contacto", usersController.contacto);
-router.get("/products", productsController.products);
+//router.get("/products", productsController.products);
+router.get("/products", productos.getProductos);
 router.get("/userProfile", usuarios.profile);
 
 router.get("/carrito", productsController.carrito);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get("/cargaProduc",productsController.cargaProduc);
-router.post("/cargaProduc",upload.single('img') ,productsController.store);
+router.get("/cargaProduc",productos.cargaProductos);
+router.post("/cargaProduc",upload.single('img') ,productos.crearProductoProcces);
 
 
 /*** REGISTER ***/ 
@@ -71,7 +72,7 @@ router.post("/register",upload.single('avatar'),validations, usuarios.createUsua
 
 
 /*** GET ONE PRODUCT ***/ 
-router.get('/productID/:id', productsController.productID);
+router.get('/productID/:id', productos.detalleProducto);
 
 
 router.get("/editProduc/:id",productsController.editProduc);
