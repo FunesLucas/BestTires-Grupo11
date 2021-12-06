@@ -21,7 +21,10 @@ const productosModel = {
         }
     },
 
-   
+    detalleProducto : async (id) => {
+        const response = await db.productos.findByPk(id)
+        return response
+    }
 
 }
 

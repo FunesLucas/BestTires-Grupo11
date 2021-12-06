@@ -33,7 +33,8 @@ const productosController = {
     detalleProducto: async (req,res,next) => {
         let id = req.params.id
 
-        const respuesta = await db.productos.findByPk(id)
+        const respuesta = await productosModel.detalleProducto(id)
+        //const respuesta = await db.productos.findByPk(id)
         res.render ('productID' , {product : respuesta})
     }
 }
