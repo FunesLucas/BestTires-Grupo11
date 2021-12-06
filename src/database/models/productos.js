@@ -34,6 +34,10 @@ module.exports = function(sequelize, DataTypes) {
     modelo: {
       type: DataTypes.STRING(100),
       allowNull: false
+    },
+    avatar : {
+      type: DataTypes.STRING(100),
+      allowNull: false
     }
   }, {
     sequelize,
