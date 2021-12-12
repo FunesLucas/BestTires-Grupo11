@@ -36,6 +36,13 @@ const productosController = {
         const respuesta = await productosModel.detalleProducto(id)
         //const respuesta = await db.productos.findByPk(id)
         res.render ('productID' , {product : respuesta})
+    },
+    editProducto: async (req,res,next) => {
+        let id = req.params.id
+
+        const respuesta = await productosModel.editProducto(id)
+        //const respuesta = await db.productos.findByPk(id)
+        res.render ('editProduc' , {products : respuesta})
     }
 }
 

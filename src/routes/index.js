@@ -75,7 +75,7 @@ router.post("/register",upload.single('avatar'),validations, usuarios.createUsua
 router.get('/productID/:id', productos.detalleProducto);
 
 
-router.get("/editProduc/:id",productsController.editProduc);
+router.get("/editProduc/:id",productos.editProducto);
 router.put("/editProduc/:id",productsController.update);
 
 router.delete('/delete/:id', productsController.destroy);

@@ -34,9 +34,9 @@ const productsController = {
     },
     
     editProduc: (req, res) => {
-        let id = req.params.id;
-		let product = model.find(elemento => elemento.id == id)
-		res.render ('editProduc',{products: product}); 
+        //let id = req.params.id;
+		//let product = model.find(elemento => elemento.id == id)
+		res.render ('editProduc'); 
         
     },
     update: (req, res) => {
