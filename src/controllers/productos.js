@@ -18,12 +18,12 @@ const productosController = {
         
         let producToCreate = {
             avatar: req.file.filename,
-            ancho: req.body.detalleProduct,
-            perfil: req.body.ProfileProduct,
-            rodado: req.body.Rolled,
+            ancho: req.body.ancho,
+            perfil: req.body.perfil,
+            rodado: req.body.rodado,
             //marca: req.body.mark,
-            modelo: req.body.model,
-            precio: req.body.priceProduct
+            modelo: req.body.modelo,
+            precio: req.body.precio
         }
 
         const respuesta = await productosModel.crearProductoProcces(producToCreate)
@@ -37,12 +37,26 @@ const productosController = {
         //const respuesta = await db.productos.findByPk(id)
         res.render ('productID' , {product : respuesta})
     },
+
     editProducto: async (req,res,next) => {
         let id = req.params.id
 
         const respuesta = await productosModel.editProducto(id)
         //const respuesta = await db.productos.findByPk(id)
         res.render ('editProduc' , {products : respuesta})
+    },
+
+    editProductoProccess: async (req, res, next) => {
+        //console.log(req.body)
+        //console.log(req.params.id)
+        try {
+            let id = req.params.id
+            const respuesta = await productosModel.editProductoProccess(id, req.body)
+        } catch (error) {
+            console.log(`fallo consulta a la base de datos ${error.message}`)
+            return []
+        }
+        res.redirect("/products")
     }
 }
 

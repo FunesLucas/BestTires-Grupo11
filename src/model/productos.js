@@ -29,6 +29,27 @@ const productosModel = {
     editProducto : async (id) => {
         const response = await db.productos.findByPk(id)
         return response
+    },
+
+    editProductoProccess : async (id, producto) => {
+        console.log(producto)
+        console.log(id)
+        try {
+            const respuesta = await db.productos.findByPk(id)
+            const response = await db.productos.update(
+                {
+                    ...producto
+                },
+                {
+                    where: {
+                        id: id
+                    }
+                }
+            )
+        } catch (error) {
+            console.log(`fallo consulta a la base de datos ${error.message}`)
+            return []
+        }
     }
 
 }

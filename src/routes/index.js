@@ -45,8 +45,8 @@ router.get("/login", guestMiddleware, usersController.login);
 router.post("/login", usuarios.loginProcces );
 
 router.get("/logout", usersController.logout )
-router.get("/detalleUsuario/:id", usuarios.detalleUsuario )
-router.put("/detalleUsuario/:id",upload.single('avatar'),validations, usuarios.editUsuario )
+router.get("/detalleUsuario/:id", usuarios.detalleUsuario)
+router.put("/detalleUsuario/:id",upload.single('avatar'),validations, usuarios.editUsuario)
 
 router.get("/lista", productos.getProductos )
 router.get("/listaUsuarios", usuarios.getUsuario )
@@ -76,7 +76,7 @@ router.get('/productID/:id', productos.detalleProducto);
 
 
 router.get("/editProduc/:id",productos.editProducto);
-router.put("/editProduc/:id",productsController.update);
+router.put("/editProduc/:id",upload.single('avatar'),productos.editProductoProccess);
 
 router.delete('/delete/:id', productsController.destroy);
 

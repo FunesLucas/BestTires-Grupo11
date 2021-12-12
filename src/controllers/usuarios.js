@@ -54,7 +54,7 @@ const usuariosController = {
     },
 
     editUsuario: async (req, res, next) => {
-        console.log(req.body)
+        
         try {
             let id = req.params.id
             const respuesta = await usuarioModel.editUsuario(id, req.body)

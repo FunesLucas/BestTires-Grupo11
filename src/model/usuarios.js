@@ -32,6 +32,7 @@ const usuarioModel = {
     },
 
     editUsuario: async (id, user) => {
+        console.log(user)
         try {
             const respuesta = await db.usuarios.findByPk(id)
             const response = await db.usuarios.update(
