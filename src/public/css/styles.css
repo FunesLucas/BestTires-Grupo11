@@ -171,7 +171,10 @@ section a img {
 
 
 /*productos*/
-
+.products{
+   background-color: white;
+   background-image: none;
+}
 .productos {
    display: flex;
    flex-wrap: wrap;
@@ -308,6 +311,7 @@ footer {
 
 
 /*Register.html*/
+
 
 .form{
    
@@ -620,7 +624,7 @@ footer {
    .buscador input {
       width: 150px;
 
-   }/*agregado productDetail*/.big-container{flex-direction: column;}.left-container{width: 100%;} .right-container{width: 100%;}
+   }
 }
 
 

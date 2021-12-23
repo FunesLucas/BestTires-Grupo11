@@ -21,8 +21,8 @@ const productosController = {
             ancho: req.body.ancho,
             perfil: req.body.perfil,
             rodado: req.body.rodado,
-            //marca: req.body.mark,
-            modelo: req.body.modelo,
+            marca: req.body.mark,
+            modelo: req.body.model,
             precio: req.body.precio
         }
 
