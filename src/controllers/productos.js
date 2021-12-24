@@ -57,6 +57,13 @@ const productosController = {
             return []
         }
         res.redirect("/products")
+    },
+
+    delete: async (req,res,next) => {
+        const id = req.params.id
+        const respuesta = await productosModel.delete(id)
+
+        res.redirect('/products')
     }
 }
 

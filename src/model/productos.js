@@ -50,6 +50,12 @@ const productosModel = {
             console.log(`fallo consulta a la base de datos ${error.message}`)
             return []
         }
+    },
+
+    delete: async (id)  => {
+        db.productos.destroy({
+            where : {ID : id}
+        })
     }
 
 }

@@ -78,7 +78,7 @@ router.get('/productID/:id', productos.detalleProducto);
 router.get("/editProduc/:id",productos.editProducto);
 router.put("/editProduc/:id",upload.single('avatar'),productos.editProductoProccess);
 
-router.delete('/delete/:id', productsController.destroy);
+router.delete('/delete/:id', productos.delete);
 
 
 router.get("/check", function (req,res){
