@@ -6,6 +6,7 @@ const productsController= require("../controllers/productsController");
 const upload = require ('../middleware/multermidd');
 const path = require ('path')
 const guestMiddleware = require ('../middleware/guestmidd');
+const guestCargaProducMiddleware = require ('../middleware/guestCargaProducMidd')
 
 const {usuarios}= require('../controllers')
 const {productos}= require('../controllers')
@@ -60,12 +61,12 @@ router.get("/userProfile", usuarios.profile);
 router.get("/carrito", productsController.carrito);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get("/cargaProduc",productos.cargaProductos);
+router.get("/cargaProduc",guestCargaProducMiddleware,productos.cargaProductos);
 router.post("/cargaProduc",upload.single('img') ,productos.crearProductoProcces);
 
 
 /*** REGISTER ***/ 
-router.get("/register", guestMiddleware, usersController.register);
+router.get("/register",guestMiddleware, usersController.register);
 /*** PROCESA REGISTER ***/ 
 //router.post("/register",upload.single('img'),validations, usersController.processRegister);
 router.post("/register",upload.single('avatar'),validations, usuarios.createUsuario);
