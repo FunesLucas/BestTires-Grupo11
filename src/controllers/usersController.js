@@ -81,7 +81,7 @@ const usersController = {
       //console.log(req.session);
       },
 
-    logout: (req, res) => {
+      logout: (req, res) => {
         req.session.destroy()
         //console.log(req.session)  // <-- Para probar si se cerro el login en session.
         return res.redirect ('/')

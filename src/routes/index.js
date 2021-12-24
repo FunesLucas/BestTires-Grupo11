@@ -5,8 +5,10 @@ const usersController= require("../controllers/usersController");
 const productsController= require("../controllers/productsController");
 const upload = require ('../middleware/multermidd');
 const path = require ('path')
-const guestMiddleware = require ('../middleware/guestmidd');
-const guestCargaProducMiddleware = require ('../middleware/guestCargaProducMidd')
+const guestMiddleware = require ('../middleware/guestMiddleware');
+const authMiddleware = require ('../middleware/authMiddleware')
+
+
 
 const {usuarios}= require('../controllers')
 const {productos}= require('../controllers')
@@ -45,7 +47,7 @@ router.get("/", mainController.index);
 router.get("/login", guestMiddleware, usersController.login);
 router.post("/login", usuarios.loginProcces );
 
-router.get("/logout", usersController.logout )
+router.get("/logout", usuarios.logout )
 router.get("/detalleUsuario/:id", usuarios.detalleUsuario)
 router.put("/detalleUsuario/:id",upload.single('avatar'),validations, usuarios.editUsuario)
 
@@ -56,12 +58,12 @@ router.get("/listaUsuarios", usuarios.getUsuario )
 router.get("/contacto", usersController.contacto);
 //router.get("/products", productsController.products);
 router.get("/products", productos.getProductos);
-router.get("/userProfile", usuarios.profile);
+router.get("/userProfile",authMiddleware, usuarios.profile);
 
 router.get("/carrito", productsController.carrito);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get("/cargaProduc",guestCargaProducMiddleware,productos.cargaProductos);
+router.get("/cargaProduc",authMiddleware,productos.cargaProductos);
 router.post("/cargaProduc",upload.single('img') ,productos.crearProductoProcces);
 
 
@@ -76,10 +78,10 @@ router.post("/register",upload.single('avatar'),validations, usuarios.createUsua
 router.get('/productID/:id', productos.detalleProducto);
 
 
-router.get("/editProduc/:id",productos.editProducto);
+router.get("/editProduc/:id",authMiddleware,productos.editProducto);
 router.put("/editProduc/:id",upload.single('avatar'),productos.editProductoProccess);
 
-router.delete('/delete/:id', productos.delete);
+router.delete('/delete/:id',authMiddleware, productos.delete);
 
 
 router.get("/check", function (req,res){

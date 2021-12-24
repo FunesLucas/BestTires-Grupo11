@@ -107,6 +107,14 @@ const usuariosController = {
         })
         
         
+    },
+
+    logout: (req, res) => {
+        req.session.destroy()
+        res.clearCookie('recordame')
+        //console.log(req.session)  // <-- Para probar si se cerro el login en session.
+        return res.redirect ('/')
+        ;
     }
 }
 

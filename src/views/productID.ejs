@@ -3,7 +3,7 @@
 
 <%- include("partials/head") -%>
 
-    <body>
+    <body class="products">
         <div class=container>
             <%- include("partials/header") -%>
                 <hr>
@@ -14,27 +14,26 @@
 
                             <div class="productsDetails">
 
-                                <img width="200" height="280" class="imagen" src="../img/<%= product.avatar %>">
+                                <img width="200" height="200" class="imagen" src="../img/<%= product.avatar %>">
                                 <div class="descrip">
                                     <li>Marca: <%= product.marca %></li>
                                     <li>Modelo: <%= product.modelo %></li>
                                     <li>Rodado: <%= product.rodado %></li>
-                                    <li>Ancho: <%= product.ancho %></li>
+                                    <li>Ancho:  <%= product.ancho %></li>
                                     <li>Perfil: <%= product.perfil %></li>
                                     <li>Precio: <%= product.precio %></li>
                                     
                                 </div>
-                                <div class="botones">
-                                    <a href="#">Comprar</a>
-                                    <a href="/editProduc/<%= product.ID %>">Editar</a>
-                                   
-                                </div>
-                                <div class= eliminar>
 
-                                    <form method="POST"  action="/delete/<%= product.ID %>?_method=DELETE">
-                                       <button type="submit">Eliminar</button>
-                                    </form>
+                                <% if (isLogged) { %>
+                                    <div class="botones">
+                                        <a href="/editProduc/<%= product.ID %>">Editar</a>
                                     </div>
+                                
+                                    <form method="POST" action="/delete/<%= product.ID %>?_method=DELETE">
+                                        <button type="submit">Eliminar</button>
+                                    </form>
+                                    <% } %>
                             </div>
                     </div>
                 </main>
