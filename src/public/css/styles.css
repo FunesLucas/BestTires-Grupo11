@@ -115,7 +115,7 @@ opacity: 0.5;
 }
 .buscador { 
    font-size: 25px;
-   display: flex;     
+   display: noen;     
    border: solid 4px rgb(68, 3, 3);
    
 }
@@ -331,7 +331,7 @@ footer {
 }
 
 .main-form .subtit-form{
-   color:black); 
+   color:black; 
    margin: 20px;
 }
 .main-form input{
@@ -539,6 +539,9 @@ footer {
    color:rgba(0, 0, 0, 0.7);
    padding: 20px 40px;
    text-decoration: none;
+}
+.carrito{
+   display: none;
 }
 
 

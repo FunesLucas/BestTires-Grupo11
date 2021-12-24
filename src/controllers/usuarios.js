@@ -67,16 +67,25 @@ const usuariosController = {
 
     loginProcces: async (req, res) => {
         let usuarioParaLogear = await usuarioModel.findByField('email', req.body.nameUsers);
+       
+        
 
         if (usuarioParaLogear) {
             //let okPassword = bcryptjs.compareSync(req.body.password, usuarioParaLogear.password)
             if (req.body.password == usuarioParaLogear.password) {
                 delete usuarioParaLogear.password;
                 req.session.userLogged = usuarioParaLogear;
-                //console.log(req.session);   <-- Para mostrar session activa
+                //console.log(req.session);   <-- Para mostrar session 
+                
+                if (req.body.recordame != undefined) {
+                    res.cookie('recordame', usuarioParaLogear.email, { maxAge: 60000 })
+                }
                 return res.redirect('/')
             }
-
+            
+            
+            
+            
             return res.render('login', {
                 errors: {
                     email: {
@@ -85,6 +94,10 @@ const usuariosController = {
                 }
             })
         }
+        
+
+
+
         return res.render('login', {
             errors: {
                 email: {
@@ -92,7 +105,8 @@ const usuariosController = {
                 }
             }
         })
-        //console.log(req.session);
+        
+        
     }
 }
 

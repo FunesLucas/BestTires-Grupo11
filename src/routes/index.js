@@ -80,4 +80,12 @@ router.put("/editProduc/:id",upload.single('avatar'),productos.editProductoProcc
 
 router.delete('/delete/:id', productsController.destroy);
 
+
+router.get("/check", function (req,res){
+    if (req.session.userLogged == undefined) {
+        res.send (' no estas logeado')
+    }else {
+        res.send('el usuario logeado es' + " " + req.session.userLogged.email)
+    }
+});
 module.exports = router;
