@@ -12,6 +12,10 @@ const usersController = {
     register: (req, res) => {
         res.render('register');
     },
+
+    registernuevo: (req, res) => {
+        res.render('registerNuevo');
+    },
     processRegister: (req, res) => {
         const resultValidation = validationResult(req)
         
@@ -51,10 +55,7 @@ const usersController = {
        res.render('login');
     },
 
-    loginnuevo:(req, res) => {
-        
-       res.render('loginnuevo');
-    },
+    
 
     loginProcces: (req,res) => {
         let usuarioParaLogear = User.findByField('email',req.body.nameUsers);

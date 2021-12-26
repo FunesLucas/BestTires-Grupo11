@@ -47,7 +47,8 @@ router.get("/", mainController.index);
 router.get("/login", guestMiddleware, usersController.login);
 router.post("/login", usuarios.loginProcces );
 
-router.get("/loginnuevo", usersController.loginnuevo );
+
+//router.get("/registerNuevo", usersController.registernuevo );
 
 
 
@@ -75,7 +76,7 @@ router.post("/cargaProduc",upload.single('img') ,productos.crearProductoProcces)
 router.get("/register",guestMiddleware, usersController.register);
 /*** PROCESA REGISTER ***/ 
 //router.post("/register",upload.single('img'),validations, usersController.processRegister);
-router.post("/register",upload.single('avatar'),validations, usuarios.createUsuario);
+router.post("/register",upload.single('avatar'), usuarios.createUsuario);
 
 
 /*** GET ONE PRODUCT ***/ 

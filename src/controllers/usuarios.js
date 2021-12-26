@@ -20,6 +20,7 @@ const usuariosController = {
     },
 
     createUsuario: async (req, res, next) => {
+        
         const resultValidation = validationResult(req)
 
         if (resultValidation.errors.length > 0) {

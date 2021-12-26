@@ -15,6 +15,7 @@ const usuarioModel = {
     },
 
     createUsuario: async (usuario) => {
+        
         try {
             const response = await db.usuarios.create(usuario)
             //console.log(response)  < Para ver si se creo correctamente 

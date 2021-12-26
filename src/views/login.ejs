@@ -14,19 +14,19 @@
             <hr>
 
             <form action="/login" method="POST" class="registro-form">
-            <div class="form-login">
-                <h5>Formulario Login</h5>
-                <input class="controls" type="email" name="nameUsers" value="" placeholder="Usuario">
-                <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
-                <div>
-                    <label>Recordame</label>
-                    <input type="checkbox" name="recordame">
+                <div class="form-login">
+                    <h5>Iniciar Sesión</h5>
+                    <input class="controls" type="email" name="nameUsers" value="" placeholder="Usuario">
+                    <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
+                    <div>
+                        <label>Recordame</label>
+                        <input type="checkbox" name="recordame">
+                    </div>
+                    <input class="buttons" type="submit" name="" value="Ingresar">
+            
+                    <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+            
                 </div>
-                <input class="buttons" type="submit" name="" value="Ingresar">
-                
-                <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
-          
-              </div>
             </form>
         </div>
         <%- include("partials/footer") -%>

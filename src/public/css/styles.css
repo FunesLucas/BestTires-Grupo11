@@ -535,6 +535,11 @@ footer {
 }
 .exam input {
    background-color: #ffffff;
+   width: 130px;
+}
+.exam {
+   margin-left: 30px;
+   padding: 10px;
 }
 
 
@@ -565,7 +570,19 @@ footer {
  }
  
  .form-login {
-   width: 400px;
+   width: 30%;
+   height: 340px;
+   background: #4e4d4d;
+   margin: auto;
+   margin-top: 90px;
+   box-shadow: 7px 13px 37px #000;
+   padding: 20px 30px;
+   border-top: 4px solid #9c6464;
+   color: white;
+ }
+
+ .form-register {
+   width: 50%;
    height: 340px;
    background: #4e4d4d;
    margin: auto;
@@ -576,7 +593,16 @@ footer {
    color: white;
  }
  
+ 
  .form-login h5 {
+   margin: 0;
+   text-align: center;
+   height: 40px;
+   margin-bottom: 30px;
+   border-bottom: 1px solid;
+   font-size: 20px;
+ }
+ .form-register h5 {
    margin: 0;
    text-align: center;
    height: 40px;
@@ -594,6 +620,18 @@ footer {
    font-size: 14px;
    font-weight: bold;
  }
+
+ .controls-register {
+   width: 40%;
+   border: 1px solid #9c6464;
+   margin-bottom: 15px;
+   padding: 11px 10px;
+   background: rgb(225 225 225);
+   font-size: 14px;
+   font-weight: bold;
+   margin: 10px;
+   margin-left: 35px;
+ }
  
  .buttons {
    width: 100%;
@@ -604,7 +642,21 @@ footer {
    margin-bottom: 16px;
    margin-top: 8px;
  }
+
+ .buttons-register {
+   width: 45%;
+   height: 40px;
+   background: #9c3e3e;
+   border: none;
+   color: white;
+   margin-bottom: 16px;
+   margin-top: 8px;
+   margin-left: 180px;
+ }
  .buttons:hover {
+   background-color: rgba(255, 99, 71, 0.644);
+ }
+ .buttons-register:hover {
    background-color: rgba(255, 99, 71, 0.644);
  }
  
@@ -613,12 +665,14 @@ footer {
    text-align: center;
    border-bottom: 1px solid;
  }
+
  
  .form-login a {
    color: white;
    text-decoration: none;
    font-size: 14px;
  }
+
  
  .form-login a:hover {
    text-decoration: underline;
