@@ -15,6 +15,10 @@ body {
 }
 .bodyloginnuevo{
    background-color: white;
+   background-image: url(https://images.pexels.com/photos/3971740/pexels-photo-3971740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 60%;
 }
 
 a {
@@ -23,9 +27,20 @@ a {
 ul {
    list-style: none;
 }
-.container {
-  flex: 1; 
+.containerr{
+   flex: 1;
 }
+.container {
+   flex: 1; 
+   
+ }
+ .container-product {
+   flex: 1; 
+   background-image: url(https://noticias.coches.com/wp-content/uploads/2017/10/neumatico-All-Season.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 70%;
+ }
 /*menu*/
 
 .nav-main {
@@ -50,8 +65,13 @@ ul {
    background-color: white;
    background-image: none;
 }
+.mainuser{
+   background-color: black;
+}
 
-
+.imgprofile {
+   border-radius: 100%;
+}
 /*menu left*/
 
 .nav-menu-left {
@@ -177,6 +197,7 @@ section a img {
 .products{
    background-color: white;
    background-image: none;
+   
 }
 .productos {
    display: flex;
@@ -186,12 +207,13 @@ section a img {
 .box-products {    
    background-color: white;
    width: 250px;
-   height: 400px;
    margin: auto;    
    align-items: center;
    margin: 5px;
    border-radius: 5px;
    padding: 20px;
+   box-shadow: 0px 0px 5px rgb(100 100 100);
+   margin-top:40px;
 }
 .box-products ul {
    border-top: 2px solid rgb(68, 3, 3);
@@ -268,7 +290,7 @@ section a img {
 /*footer*/
 
 footer {
-   margin-top: 10px;
+   
    padding: 15px;
    background-color: #000000;
    color: rgb(136, 132, 132);
@@ -371,7 +393,6 @@ footer {
 .big-container{
    padding: 10px;
    display: flex;
-   background-color: white;
    width: 100%; 
    border: none;
    justify-content: space-around;
