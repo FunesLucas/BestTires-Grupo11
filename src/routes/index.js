@@ -47,6 +47,10 @@ router.get("/", mainController.index);
 router.get("/login", guestMiddleware, usersController.login);
 router.post("/login", usuarios.loginProcces );
 
+router.get("/loginnuevo", usersController.loginnuevo );
+
+
+
 router.get("/logout", usuarios.logout )
 router.get("/detalleUsuario/:id", usuarios.detalleUsuario)
 router.put("/detalleUsuario/:id",upload.single('avatar'),validations, usuarios.editUsuario)

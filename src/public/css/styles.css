@@ -4,7 +4,7 @@
    padding: 0;
 }
 body {
-   background-color: #0d0c0d;
+   background-color: #000000;
    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%237e0606' fill-opacity='0.58'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
    font-size: 16px;
    font-family: 'Prompt', sans-serif;
@@ -12,6 +12,9 @@ body {
   flex-direction:column;
   min-height: 100vh;
 
+}
+.bodyloginnuevo{
+   background-color: white;
 }
 
 a {
@@ -543,6 +546,96 @@ footer {
 .carrito{
    display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ body {
+   font-family: arial;
+   background-image: url('bg.png');
+ }
+ 
+ .form-login {
+   width: 400px;
+   height: 340px;
+   background: #4e4d4d;
+   margin: auto;
+   margin-top: 90px;
+   box-shadow: 7px 13px 37px #000;
+   padding: 20px 30px;
+   border-top: 4px solid #9c6464;
+   color: white;
+ }
+ 
+ .form-login h5 {
+   margin: 0;
+   text-align: center;
+   height: 40px;
+   margin-bottom: 30px;
+   border-bottom: 1px solid;
+   font-size: 20px;
+ }
+ 
+ .controls {
+   width: 100%;
+   border: 1px solid #9c6464;
+   margin-bottom: 15px;
+   padding: 11px 10px;
+   background: rgb(225 225 225);
+   font-size: 14px;
+   font-weight: bold;
+ }
+ 
+ .buttons {
+   width: 100%;
+   height: 40px;
+   background: #9c3e3e;
+   border: none;
+   color: white;
+   margin-bottom: 16px;
+   margin-top: 8px;
+ }
+ .buttons:hover {
+   background-color: rgba(255, 99, 71, 0.644);
+ }
+ 
+ .form-login p{
+   height: 40px;
+   text-align: center;
+   border-bottom: 1px solid;
+ }
+ 
+ .form-login a {
+   color: white;
+   text-decoration: none;
+   font-size: 14px;
+ }
+ 
+ .form-login a:hover {
+   text-decoration: underline;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*media-queris*/
