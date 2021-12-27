@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("partials/head") -%>
+
+    <body>
+
+        <%- include("partials/header") -%>
+            <div class=container>
+                <main class="cargaP">
+                    <div class="formulario">
+                        <h2 class="tit-form">Carga de Productos</h2>
+                        <form action="/cargaProduc" method="POST" class="Carga-product" enctype="multipart/form-data">
+                            <div class="datosProduct">
+                                
+                                <input type="text" required placeholder="Ancho" name="ancho">
+                                <input type="text" required placeholder="Perfil" name="perfil">
+                                <input type="text" required placeholder="Rodado" name="rodado">
+                                <input type="text" required placeholder="Marca" name="marca">
+                                <input type="text" required placeholder="Modelo" name="model">
+                                <input type="text" required placeholder="Precio" name="precio">
+                                <div class="labelform">
+                                    <label>Imagen del Producto</label>
+                                </div>
+                                <div class="exam">
+                                    <input type="file" name="img">
+                                </div>
+
+                                <div class="button-register">
+                                    <button type="submit">Cargar Producto</button>
+                                    <button type="reset"><a href="/">Cancelar</a></button>
+
+                                </div>
+                        </form>
+                    </div>
+                </main>
+            </div>
+            <%- include("partials/footer") -%>
+
+    </body>
+
+</html>

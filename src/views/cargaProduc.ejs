@@ -3,39 +3,42 @@
 
 <%- include("partials/head") -%>
 
-    <body>
+    <body class="bodyloginnuevo">
+        <div class=containerr>
+            <%- include("partials/header") -%>
+            <hr>
 
-        <%- include("partials/header") -%>
-            <div class=container>
-                <main class="cargaP">
-                    <div class="formulario">
-                        <h2 class="tit-form">Carga de Productos</h2>
-                        <form action="/cargaProduc" method="POST" class="Carga-product" enctype="multipart/form-data">
-                            <div class="datosProduct">
-                                
-                                <input type="text" required placeholder="Ancho" name="ancho">
-                                <input type="text" required placeholder="Perfil" name="perfil">
-                                <input type="text" required placeholder="Rodado" name="rodado">
-                                <input type="text" required placeholder="Marca" name="marca">
-                                <input type="text" required placeholder="Modelo" name="model">
-                                <input type="text" required placeholder="Precio" name="precio">
-                                <div class="labelform">
-                                    <label>Imagen del Producto</label>
-                                </div>
-                                <div class="exam">
-                                    <input type="file" name="img">
-                                </div>
-
-                                <div class="button-register">
-                                    <button type="submit">Cargar Producto</button>
-                                    <button type="reset"><a href="/">Cancelar</a></button>
-
-                                </div>
-                        </form>
+            
+            <form action="/cargaProduc" method="POST" class="registro-form" enctype="multipart/form-data">
+                <div class="form-cargaproduc">
+                    <h5>Carga de Producto</h5>
+                    
+                    
+                    <div>
+                    <input class="labModelo" type="text" placeholder="Modelo:">
+                    <input class="controls-cargaproduc" type="text" name="model" value="" placeholder="">
+                    <input class="labModelo" type="text" placeholder="Ancho:">
+                    <input class="controls-cargaproduc" type="text" name="ancho" value="" placeholder="">
+                    <input class="labModelo" type="text" placeholder="Perfil:">
+                    <input class="controls-cargaproduc" type="text" name="perfil" value="" placeholder="">
+                    <input class="labModelo" type="text" placeholder="Rodado:">
+                    <input class="controls-cargaproduc" type="text" name="rodado" value="" placeholder="">
+                    <input class="labModelo" type="text" placeholder="Precio:">
+                    <input class="controls-cargaproduc" type="text" name="precio" value="" placeholder="">
                     </div>
-                </main>
-            </div>
-            <%- include("partials/footer") -%>
+                    <div class="exam">
+                        <label>Avatar :</label>
+                        <input type="file" name="avatar">
+                    </div>
+                    <input class="buttons-register" type="submit" value="Enviar">
+                    
+            
+            
+            
+                </div>
+            </form>
+        </div>
+        <%- include("partials/footer") -%>
 
     </body>
 

@@ -69,7 +69,8 @@ router.get("/carrito", productsController.carrito);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get("/cargaProduc",authMiddleware,productos.cargaProductos);
-router.post("/cargaProduc",upload.single('img') ,productos.crearProductoProcces);
+
+router.post("/cargaProduc",upload.single('avatar') ,productos.crearProductoProcces);
 
 
 /*** REGISTER ***/ 
