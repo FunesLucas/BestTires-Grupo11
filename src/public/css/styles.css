@@ -674,20 +674,29 @@ footer {
    border: none;
    border-bottom: 1px solid;
    }
-
+   .imagenproductid{
+      width: 30%;
+   }
    .controls-cargaproduc{
       width: 70%;
-   
+     
       margin-bottom: 15px;
       padding: 11px 10px;
       background: #707070;
       font-size: 14px;
-      font-weight: bold;
+      
       margin-left: 35px;
       outline: none;
       border: none;
       border-bottom: 1px solid;
    }
+   .controls-cargaproduc:-webkit-autofill,
+   .controls-cargaproduc:-webkit-autofill:hover,
+   .controls-cargaproduc:-webkit-autofill:focus,
+   .controls-cargaproduc:-webkit-autofill:active {
+    -webkit-transition: ;
+    -webkit-transition-delay: 9999s;
+}
 
    .input-register{
       display: flex;
@@ -700,6 +709,7 @@ footer {
     margin-left: 50px;
     border: none;
     outline: none;
+    font-weight: bold;
  }
  .labModelo::placeholder{
     color :black
