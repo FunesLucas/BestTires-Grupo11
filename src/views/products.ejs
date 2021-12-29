@@ -13,7 +13,18 @@
 
                         <div class="right-container">
                             <div class="header">
-                                <h3>PRODUCTOS</h3>
+                                
+                                <h3>PRODUCTOS </h3>
+                               <!-- 
+                                   // Recorro variable de products, e imprimo cada marca correspondiente a dicho producto //
+                                
+                                <% for (let i = 0; i < products.length; i++) { %>
+                                    <% if (products[i].marca) { %>
+                                        <%= products[i].marca.nombre %>
+                                    <% } %>
+                                    <% } %> 
+                                
+                                -->
                             </div>
 
                             <div class="productos">
@@ -21,7 +32,7 @@
                                     <!--productCard-->
                                     <%- include('partials/productCards', {product}) %>
                                     <!--/productCard-->
-                                <% }); %>
+                                    <% }); %>
                                
 
                             </div>

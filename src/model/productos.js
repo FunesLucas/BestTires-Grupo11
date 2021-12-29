@@ -2,6 +2,12 @@ const { response } = require("express");
 const db = require("../database/models")
 
 const productosModel = {
+    findAll : async () => {
+        const respuesta = await db.productos.findAll({
+            include: [{ association: "marca" }]
+        })
+        return respuesta
+    },
 
     getProductos: async () => {
         try {
@@ -22,12 +28,16 @@ const productosModel = {
     },
 
     detalleProducto : async (id) => {
+       
         const response = await db.productos.findByPk(id)
+        
         return response
     },
     
-    editProducto : async (id) => {
-        const response = await db.productos.findByPk(id)
+    marcas : async (id) => {
+        const response = await db.productos.findByPk(id, {
+            include: [{ association: "marca" }]
+        } )
         return response
     },
 

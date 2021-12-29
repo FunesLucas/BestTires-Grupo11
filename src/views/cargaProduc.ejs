@@ -12,29 +12,46 @@
             <form action="/cargaProduc" method="POST" class="registro-form" enctype="multipart/form-data">
                 <div class="form-cargaproduc">
                     <h5>Carga de Producto</h5>
-                    
-                    
+            
+            
                     <div>
-                    <input class="labModelo" type="text" placeholder="Modelo:">
-                    <input class="controls-cargaproduc" type="text" name="model" value="" placeholder="">
-                    <input class="labModelo" type="text" placeholder="Ancho:">
-                    <input class="controls-cargaproduc" type="text" name="ancho" value="" placeholder="">
-                    <input class="labModelo" type="text" placeholder="Perfil:">
-                    <input class="controls-cargaproduc" type="text" name="perfil" value="" placeholder="">
-                    <input class="labModelo" type="text" placeholder="Rodado:">
-                    <input class="controls-cargaproduc" type="text" name="rodado" value="" placeholder="">
-                    <input class="labModelo" type="text" placeholder="Precio:">
-                    <input class="controls-cargaproduc" type="text" name="precio" value="" placeholder="">
+                        <div class="caracteristicas">
+                            <input class="labModelo" type="text" placeholder="Modelo:">
+                            <input class="controls-cargaproduc" type="text" name="model" value="" placeholder="">
+                            <input class="labModelo" type="text" placeholder="Fabricante:">
+                            <select class="marca" name="marcas">
+                                <% for (let i=0; i < marcas.length; i++) { %>
+                                    <option value=<%=marcas[i].ID %>>
+                                        <%= marcas[i].nombre%>
+                                    </option>
+                        
+                                    <% } %>
+                            </select>
+                        
+                            
+                        
+                        
+                        
+                            <input class="labModelo" type="text" placeholder="Ancho:">
+                            <input class="controls-cargaproduc" type="text" name="ancho" value="" placeholder="">
+                            <input class="labModelo" type="text" placeholder="Perfil:">
+                            <input class="controls-cargaproduc" type="text" name="perfil" value="" placeholder="">
+                            <input class="labModelo" type="text" placeholder="Rodado:">
+                            <input class="controls-cargaproduc" type="text" name="rodado" value="" placeholder="">
+                            <input class="labModelo" type="text" placeholder="Precio:">
+                            <input class="controls-cargaproduc" type="text" name="precio" value="" placeholder="">
+                            <div class="exam">
+                                <label>Avatar :</label>
+                                <input type="file" name="avatar">
+                            </div>
+                                <input class="buttons-register" type="submit" value="Enviar">
+            
+                        </div>
+                            
+            
+            
+            
                     </div>
-                    <div class="exam">
-                        <label>Avatar :</label>
-                        <input type="file" name="avatar">
-                    </div>
-                    <input class="buttons-register" type="submit" value="Enviar">
-                    
-            
-            
-            
                 </div>
             </form>
         </div>

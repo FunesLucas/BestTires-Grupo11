@@ -9,28 +9,34 @@
                 <hr>
                 <main>
                     <div class="proDet">
-                                <h3>DETALLE DEL PRODUCTO</h3>
+                                <h3>Caracteristicas</h3>
                             
 
                             <div class="productsDetails">
 
                                 <img  class="imagenproductid" src="../img/<%= product.avatar %>">
                                 <div class="descrip">
-                                    <li>Marca: <%= product.marca %></li>
-                                    <li>Modelo: <%= product.modelo %></li>
-                                    <li>Rodado: <%= product.rodado %></li>
-                                    <li>Ancho:  <%= product.ancho %></li>
-                                    <li>Perfil: <%= product.perfil %></li>
-                                    <li>Precio: <%= product.precio %></li>
+                                    <div class="titdescripcion">
+                                   <h1 class="titdesc">Neumatico <%= product.marca.nombre %></h1>
+                                   <p>estrellas de calificacion</p>
+                                    </div>  
+                                    
+                                    <h1 class="titmodelo"><%= product.modelo %></h1>
+
+                                    <p class="detalleproduc"><%= product.ancho %>  /  <%= product.perfil %>  /  <%= product.rodado %></p>
+                                    
+                                    <h2 class="titprecio">$ <%= product.precio %></h2>
+                                    
+                                    
                                     
                                     <% if (isLogged) { %>
-                                        <div class="botones">
-                                            <a href="/editProduc/<%= product.ID %>">Editar</a>
-                                        </div>
-                                    
+                                        
+                                        <div class="botones-edit">
+                                        <a href="/editProduc/<%= product.ID %>"><button class="boton-editar" type="submit">Editar</button></a>
                                         <form method="POST" action="/delete/<%= product.ID %>?_method=DELETE">
-                                            <button type="submit">Eliminar</button>
+                                            <button class="boton-eliminar" type="submit">Eliminar</button>
                                         </form>
+                                    </div>
                                         <% } %>
                                 </div>
 

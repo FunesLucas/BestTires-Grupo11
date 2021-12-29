@@ -37,7 +37,7 @@ app.use(userLoggedmidd);
 app.use('/', rutasIndex);
 
 
-const puerto = process.env.PORT || 3500
+const puerto = process.env.PORT || 3000
 app.listen(puerto, () => {
   console.log('Server is running on PORT ' + puerto);
 });

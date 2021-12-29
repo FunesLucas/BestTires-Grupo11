@@ -66,7 +66,8 @@ ul {
    background-image: none;
 }
 .mainuser{
-   background-color: black;
+   background-color: rgb(255, 255, 255);
+   
 }
 
 .imgprofile {
@@ -251,6 +252,8 @@ section a img {
 }
 .descrip {
    list-style: none;
+   width: 50%;
+   
   
 }
 .botones {
@@ -406,6 +409,10 @@ footer {
    border:none;
    flex-wrap: wrap;
    box-sizing: border-box; 
+   background-image: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 70%;
  }
 
 
@@ -591,7 +598,7 @@ footer {
  }
  
  .form-login {
-   width: 30%;
+   width: 500px;
    height: 340px;
    background: #4e4d4d;
    margin: auto;
@@ -600,11 +607,12 @@ footer {
    padding: 20px 30px;
    border-top: 4px solid #9c6464;
    color: white;
+   margin-bottom: 30px;
  }
 
  .form-register {
-   width: 50%;
-   height: 350px;
+   width: 630px;
+   ;
    background: #4e4d4d;
    margin: auto;
    margin-top: 90px;
@@ -616,8 +624,8 @@ footer {
  }
 
  .form-cargaproduc {
-   width: 30%;
-   height: 600px;
+   width: 450px;
+   
    background: #707070;
    margin: auto;
    margin-top: 90px;
@@ -663,19 +671,33 @@ footer {
  }
 
  .controls-register {
-   width: 40%;
+   width: 80%;
    margin-bottom: 15px;
    padding: 11px 10px;
    background: rgb(225 225 225);
    font-size: 14px;
    font-weight: bold;
-   margin-left: 35px;
+   margin-left: 20px;
    outline: none;
    border: none;
    border-bottom: 1px solid;
    }
    .imagenproductid{
-      width: 30%;
+      width: 450px;
+      margin-left: 100px;
+   }
+   .imagen{
+      width: 200px;
+      height: 200px;
+   }
+   .marca{
+      
+      background-color: #c2bcbc;
+      outline: none;
+      border-radius: 5px;
+      margin: 10px 30px 22px;
+      margin-left: 30px;
+      width: 70%;
    }
    .controls-cargaproduc{
       width: 70%;
@@ -689,6 +711,7 @@ footer {
       outline: none;
       border: none;
       border-bottom: 1px solid;
+      margin-right: 50px;
    }
    .controls-cargaproduc:-webkit-autofill,
    .controls-cargaproduc:-webkit-autofill:hover,
@@ -700,20 +723,45 @@ footer {
 
    .input-register{
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      
    }
- .labModelo{
-    width: 80%;
-    background-color: #707070;
-    border: none;
-    margin-left: 50px;
-    border: none;
-    outline: none;
-    font-weight: bold;
- }
- .labModelo::placeholder{
-    color :black
- }
+   .labModelo{
+      width: 80%;
+      background-color: #707070;
+      border: none;
+      margin-left: 50px;
+      border: none;
+      outline: none;
+      font-weight: bold;
+   }
+   .labFabricante{
+      width: 20%;
+      background-color: #707070;
+      border: none;
+      margin-left: 70px;
+      border: none;
+      outline: none;
+      font-weight: bold;
+   }
+   .labModelo1{
+      width: 20%;
+      background-color: #707070;
+      border: none;
+      margin-left: 50px;
+      border: none;
+      outline: none;
+      font-weight: bold;
+   }
+   .labModelo::placeholder{
+      color :black
+   }
+.labModelo1::placeholder{
+   color :black
+}
+.labFabricante::placeholder{
+   color :black
+}
  .controls-register::placeholder{
     color: black
  }
@@ -734,9 +782,10 @@ footer {
    background: #9c3e3e;
    border: none;
    color: white;
-   margin-bottom: 16px;
+   
    margin-top: 8px;
-   margin-left: 180px;
+   margin: auto;
+   
  }
  .buttons:hover {
    background-color: rgba(255, 99, 71, 0.644);
@@ -749,6 +798,11 @@ footer {
    height: 40px;
    text-align: center;
    border-bottom: 1px solid;
+ }
+ .caracteristicas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
  }
 
  
@@ -763,11 +817,79 @@ footer {
    text-decoration: underline;
  }
 
+ .input-register{
+   display: flex;
+}
 
+.optionregister{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   flex-direction: column;
+   align-content: space-around;
+}
 
+.titdesc{
+   font-size: 4.5rem;
 
+}
+.titdescripcion{
+   border-bottom: 2px solid;
+   width: 95%;
+   text-align: center;
+}
+.titdescripcion p {
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+.titmodelo{
+   font-size: 2.2rem;
+   margin-top: 20px;
+   margin-left: 80px;
+}
+.detalleproduc{
+   margin-top: 20px;
+   font-size: 1.5rem;
+   margin-left: 100px;
+}
+.titprecio{
+   font-size: 2.5rem;
+   margin-right: 100px;
+   text-align: end;
 
-
+}
+.botones-edit{
+   display: flex;
+   width: 113px;
+   border: 1px solid;
+   border-radius: 5px;
+}
+.boton-editar{
+   margin: 3px;
+   padding: 2px;
+   border-radius: 5px;
+}
+.boton-editar:hover{
+   background-color: rgba(187, 228, 187, 0.671);
+}
+.boton-eliminar {
+   margin: 3px;
+   padding: 2px;
+   border-radius: 5px;
+}
+.boton-eliminar:hover {
+  background-color: rgba(218, 165, 165, 0.479);
+}
+.proDet h3 {
+   margin-top: 30px;
+   margin-bottom: 30px;
+   font-size: 1.5rem;
+   margin-left: 80px;
+}
+.botones-edit {
+   margin-top: 10px;
+   margin-bottom: 10px ;
+}
 
 
 
@@ -789,6 +911,20 @@ footer {
        font-size: 40px;
  
     }
+    .form-cargaproduc {
+       width: 300px;
+       min-width: 280px;
+    }
+    .navbar-nav-login{
+       display: none;
+    }
+    .titmodelo {
+       margin-left: 10px;
+    }
+    .titdescripcion h1 {
+      font-size: 1.5rem;
+   }
+    
    
 }
 @media (min-width: 361px){
@@ -816,6 +952,8 @@ footer {
        font-size: 40px;
  
     }
+    
+    
 }
 
 @media (min-width: 769px){
@@ -830,6 +968,73 @@ footer {
       width: 100px;
    }
    
+   
+   
+   
+}
+
+@media (max-width: 769px){
+  
+   .form-cargaproduc {
+      width: 80%;
+      max-width: 450px;
+   }
+   .navbar-nav-login{
+      display: none;
+   }
+   .form-login{
+      width: 60%;
+      min-width: 300px
+   }
+   .form-register{
+      width: 80%;
+   }
+   .input-register {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .controls-register {
+      width: 100%;
+   }
+   .controlsuno {
+      width: 90%;
+   }
+   .controlsdos {
+      width: 90%;
+   }
+   .productsDetails{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .imagenproductid {
+      margin-left: 0 ;
+      width: 30%;
+   }
+   .titdesc {
+      font-size: 2.5rem;
+   }
+   .titmodelo {
+      font-size: 1.2rem;
+      margin-left: 20px;
+   }
+   .detalleproduc {
+      font-size: 1.2rem;
+      margin-left: 10px;
+   }
+   .proDet h3 {
+      margin-left: 30px;
+   }
+   .titprecio {
+      margin-right: 0px;
+      font-size: 1.9rem;
+   }
+   .botones-edit {
+      margin-top: 10px;
+      margin-bottom: 10px;
+   }
+
 }
 
 @media (max-width: 1200px){
@@ -859,6 +1064,9 @@ footer {
    .buscador input {
       width: 150px;
 
+   }
+   .navbar-nav-login{
+      display: none;
    }
 }
 
