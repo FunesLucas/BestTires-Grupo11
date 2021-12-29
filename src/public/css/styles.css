@@ -224,7 +224,7 @@ section a img {
 }
 .productos {
    display: flex;
-   
+   flex-wrap: wrap;
    justify-content: space-around;  
 }
 .box-products {    
@@ -1173,6 +1173,9 @@ ul{
    .boton-editarusuario {
       margin-top: 10px;
    }
+   .barraUserProfile{
+      display: none;
+   }
    
 
 }
@@ -1206,6 +1209,9 @@ ul{
 
    }
    .navbar-nav-login{
+      display: none;
+   }
+   .barraUserProfile{
       display: none;
    }
 }
