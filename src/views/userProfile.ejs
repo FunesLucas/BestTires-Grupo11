@@ -4,11 +4,12 @@
 <%- include("partials/head") -%>
 
     <body class="bodyuser">
+        <%- include("partials/header") -%>
         <div class=container>
-            <%- include("partials/header") -%>
+            
                 <hr>
                 <main class="mainuser">
-                    <div class="container-product">
+                    <div class="container-productProfile">
                         <div class="right-containerProduc">
                         
                         
@@ -18,7 +19,7 @@
                                 </h5>
                                 <center>
                                 <img width="300" src="../img/<%= locals.userLogged.avatar %>" class="imgprofile">
-                            </center>
+                                </center>
                                 <br>
                                 <br>
                                 <div class="alert alert-success">
@@ -37,20 +38,18 @@
 
                                     <label >Correo Electronico : </label>
                                     <h3 class="emailprofile"><%= user.email %></h3>
+                                    <a href="/detalleUsuario/<%= user.ID%>"><button class="boton-editarusuario" type="submit">Editar Usuario</button></a>
                                 </div>
                                 
                             </div>
-                           
+                          
                         </div>
+
                       </div>
                 </main>
         </div>
 
-        <div class="botones">
-            >
-            <a href="/detalleUsuario/<%= user.ID%>">Editar</a>
-           
-        </div>
+        
         
         
 

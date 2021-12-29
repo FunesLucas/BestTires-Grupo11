@@ -40,6 +40,10 @@ const productosModel = {
         } )
         return response
     },
+    editProducto : async (id) => {
+        const response = await db.productos.findByPk(id )
+        return response
+    },
 
     editProductoProccess : async (id, producto) => {
         console.log(producto)

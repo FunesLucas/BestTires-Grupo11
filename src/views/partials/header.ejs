@@ -26,13 +26,13 @@
 
 
         <% if (isLogged) { %>
-            <ul class="navbar-nav-login">
+           <!--  <ul class="navbar-nav-login">
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <a href="/userProfile"><img src="../img/<%= locals.userLogged.avatar %>" width="40px" height="35px"
-                                style="border-radius: 200%;"></a>
+                            style="border-radius: 200%;"></a>
 
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,7 +46,26 @@
                     <a href="/cargaProduc"><i class="fas fa-cloud-upload-alt"></i>Cargar Producto</a>
                 </li>
                 </li>
-            </ul>
+            </ul>-->
+        
+
+            <div class="barraUserProfile">
+                <img src="../img/<%= locals.userLogged.avatar %>" width="40px" height="35px" style="border-radius: 200%;">
+                <ul class="userProfileNav">
+                    
+                    <li><a href=""> Hola ! <%= locals.userLogged.nombre %></a>
+                        <ul>
+                            <li><a href="/cargaProduc">Cargar Productos</a></li>
+                            <li><a href="/userProfile">Información</a></li>
+                            
+                            <li><a href="/logout">Cerrar Sessión</a></li>
+                        </ul>
+                    </li>
+        
+                   
+                </ul>
+            </div>
+
             <% } else { %>
                 <ul class="nav-menu-right">
                     <li>
@@ -59,5 +78,8 @@
 
                 </ul>
                 <% } %>
+
+                
+                
     </nav>
 </header>

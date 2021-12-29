@@ -1,84 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <%- include("partials/head") -%>
 
-    <body>
-        <div class=container>
+    <body class="bodyloginnuevo">
+        <div class=containerr>
             <%- include("partials/header") -%>
-                <article class="form">
+            <hr>
 
-                    <div class="main-form">
+            
+            <form action="/detalleUsuario/<%= user.ID %>?_method=PUT" method="POST" class="registro-form" enctype="multipart/form-data">
+                <div class="form-register">
+                    <h5>Crea tu Cuenta</h5>
 
-                        <h2 class="tit-form">Editar Usuario</h2>
-
-                        
-
-                        <form action="/detalleUsuario/<%= user.ID %>?_method=PUT" method="POST" class="registro-form" enctype="multipart/form-data">
-
-                            <div class="input1">
-
-                                <input type="text" placeholder="nombre" name="nombre" value= "<%= user.nombre %>" >
-                                <input type="text" placeholder="Apellido" name="apellido" value="<%= user.apellido %>">
-                              
-
-                            </div>
-
-                            <div class="input1">
-
-                                <input type="text" placeholder="Correo electronico" name="email" value= "<%= user.email %>">
-                                <input type="password" placeholder="Contraseña" name="password" value= "<%= user.password %>">
-
-                            </div>
-
-                            <div>
-
-                                <div class="exam">
-                                    <label>Imagen de Perfil:</label>
-                                    <input type="file" name="avatar">
-                                </div>
-
-                            </div>
-
-                            <div class="button-register">
-                                <button type="submit">Enviar</button>
-                            </div>
-
-                            <% if (locals.errors && errors.firstName) { %>
-                                <p class="errores">
-                                    <%= errors.firstName.msg %>
-                                </p>
-                                <% } %>
-
-                                    <% if (locals.errors && errors.lastName) { %>
-                                        <p class="errores">
-                                            <%= errors.lastName.msg %>
-                                        </p>
-                                        <% } %>
-
-                                            <% if (locals.errors && errors.email) { %>
-                                                <p class="errores">
-                                                    <%= errors.email.msg %>
-                                                </p>
-                                                <% } %>
-
-                                                    <% if (locals.errors && errors.password) { %>
-                                                        <p class="errores">
-                                                            <%= errors.password.msg %>
-                                                        </p>
-                                                        <% } %>
-
-                                                        <% if (locals.errors && errors.img) { %>
-                                                            <p class="errores">
-                                                                <%= errors.img.msg %>
-                                                            </p>
-                                                            <% } %>
-                        </form>
-
+                    <div class="input-register">
+                        <div class="controlsuno">
+                            <input class="controls-register" type="text" name="nombre" value="<%= user.nombre %>" placeholder="Nombre">
+                            <input class="controls-register" type="text" name="apellido" value="<%= user.apellido %>" placeholder="Apellido">
+                        </div>
+                        <div class="controlsdos">
+                            <input class="controls-register" type="email" name="email" value="<%= user.email %>" placeholder="Email">
+                            <input class="controls-register" type="password" name="password" value="<%= user.password %>" placeholder="Password">
+                        </div>
                     </div>
-                </article>
-
+                    <div class="optionregister">
+                        <div class="exam">
+                            <label>Avatar :</label>
+                            <input type="file" name="avatar">
+                        </div>
+                       
+                        <input class="buttons-register" type="submit" value="Editar">
+                        
+                    </div>
+                    
+            
+            
+            
+                </div>
+            </form>
         </div>
         <%- include("partials/footer") -%>
 

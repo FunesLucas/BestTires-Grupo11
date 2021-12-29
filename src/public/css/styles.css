@@ -30,20 +30,39 @@ a {
 ul {
    list-style: none;
 }
-.containerr{
-   flex: 1;
-}
+
 .container {
-   flex: 1; 
+  flex:1;
+  background-color: rgb(255, 255, 255);
+  background-image: url(https://noticias.coches.com/wp-content/uploads/2017/10/neumatico-All-Season.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70%;
    
+   
+ }
+ .containerIndex{
+    flex: 1;
+    background-color: black;
+ }
+ .containerr{
+    flex:1;
+ }
+ .containerProductId{
+    flex: 1;
  }
  .container-product {
    flex: 1; 
-   background-image: url(https://noticias.coches.com/wp-content/uploads/2017/10/neumatico-All-Season.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: 70%;
+   background-color: rgb(255, 255, 255);
+      background-image: url(https://noticias.coches.com/wp-content/uploads/2017/10/neumatico-All-Season.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 70%;
    padding: 50px;
+ }
+ .container-productProfile {
+    flex:1;
+    padding: 50px;
  }
 /*menu*/
 
@@ -69,10 +88,7 @@ ul {
    background-color: white;
    background-image: none;
 }
-.mainuser{
-   background-color: rgb(255, 255, 255);
-   
-}
+
 
 .imgprofile {
    border-radius: 100%;
@@ -208,7 +224,7 @@ section a img {
 }
 .productos {
    display: flex;
-   flex-wrap: wrap;
+   
    justify-content: space-around;  
 }
 .box-products {    
@@ -890,9 +906,20 @@ footer {
    padding: 2px;
    border-radius: 5px;
 }
+
 .boton-editar:hover{
    background-color: rgba(187, 228, 187, 0.671);
 }
+
+.boton-editarusuario{
+   margin-top: 150px;
+   padding: 2px;
+   border-radius: 5px;
+}
+.boton-editarusuario:hover{
+   background-color: rgba(187, 228, 187, 0.671);
+}
+
 .boton-eliminar {
    margin: 3px;
    padding: 2px;
@@ -920,7 +947,51 @@ footer {
    padding: 30px;
 }
 
+/*MENU USER PROFILE */
 
+*{
+   padding: 0;
+   margin: 0;
+}
+
+ul{
+   list-style: none;
+}
+.barraUserProfile{
+   width: 300px;
+   display: flex;
+   margin-left: 300px;
+}
+
+.userProfileNav li a{
+   background-color: white;
+   color:black;
+   text-decoration: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   display: block;
+}
+.userProfileNav li {
+   width: 180px;
+   
+}
+
+.userProfileNav > li {
+   float: left;
+}
+
+.userProfileNav li a:hover{
+   background-color: blanchedalmond;
+}
+
+.userProfileNav li ul{
+   display: none;
+   position: absolute;
+   min-width: 140px
+}
+.userProfileNav li:hover ul{
+   display: block;
+}
 
 
 
@@ -1098,6 +1169,9 @@ footer {
    }
    .emailprofile{
       font-size: 1em;
+   }
+   .boton-editarusuario {
+      margin-top: 10px;
    }
    
 
