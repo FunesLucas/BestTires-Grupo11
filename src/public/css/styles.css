@@ -3,6 +3,9 @@
    margin: 0;
    padding: 0;
 }
+html {
+   font-size: 10px;
+}
 body {
    background-color: #000000;
    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%237e0606' fill-opacity='0.58'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -40,6 +43,7 @@ ul {
    background-repeat: no-repeat;
    background-size: cover;
    background-position: 70%;
+   padding: 50px;
  }
 /*menu*/
 
@@ -72,6 +76,8 @@ ul {
 
 .imgprofile {
    border-radius: 100%;
+   border: 5px solid white;
+   margin-left: 15px;
 }
 /*menu left*/
 
@@ -404,15 +410,30 @@ footer {
 
 .right-container{
    padding: 5px;
-   width: 75%;
-   display: flex; 
-   border:none;
-   flex-wrap: wrap;
-   box-sizing: border-box; 
+   width: 50%;
    background-image: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 70%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 70%;
+ }
+ .right-containerProduc{
+   padding: 5px;
+   width: 60%;
+   background-color: rgb(172, 164, 164); 
+   margin: auto;
+   border-radius: 10px;
+   display: flex;
+   min-width: 680px
+   
+ }
+ .right-containerProduclista{
+   padding: 5px;
+   width: 60%;
+  
+   margin: auto;
+   border-radius: 10px;
+   
+   
  }
 
 
@@ -890,6 +911,14 @@ footer {
    margin-top: 10px;
    margin-bottom: 10px ;
 }
+.cajaa2{
+   width: 70%;
+   margin-left: 20px;
+   border-left: 2px solid  ;
+}
+.datospersonales{
+   padding: 30px;
+}
 
 
 
@@ -923,6 +952,10 @@ footer {
     }
     .titdescripcion h1 {
       font-size: 1.5rem;
+   }
+   .right-containerProduc {
+      width: 80%;
+      min-width: 0;
    }
     
    
@@ -1034,6 +1067,39 @@ footer {
       margin-top: 10px;
       margin-bottom: 10px;
    }
+   .right-containerProduc {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      width: 70%;
+      min-width: 230px
+   }
+   .imgprofile {
+      width: 80%;
+      margin-left: 0;
+   }
+   .datospersonales h3 {
+      
+   }
+   .cajaa2 {
+      margin-left: 0;
+      border-left: none;
+      border-top: 2px solid black;
+      width: 100%;
+   }
+   .datospersonales {
+      padding: 4px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   .nombreprofile{
+      font-size: 1em;
+   }
+   .emailprofile{
+      font-size: 1em;
+   }
+   
 
 }
 

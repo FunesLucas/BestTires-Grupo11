@@ -8,19 +8,39 @@
             <%- include("partials/header") -%>
                 <hr>
                 <main class="mainuser">
-                    <div class="big-container">
-                        <div class="right-container">
-                        <div class="container" style="margin-top: 40px;">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h2>Hola! <%= user.nombre %> <%= user.apellido %> </h2>
-                                <img width="400"  src="../img/<%= locals.userLogged.avatar %>" class="imgprofile" >
+                    <div class="container-product">
+                        <div class="right-containerProduc">
+                        
+                        
+                            <div class="cajaa1">
+                                <h5>Avatar:
+                                        
+                                </h5>
+                                <center>
+                                <img width="300" src="../img/<%= locals.userLogged.avatar %>" class="imgprofile">
+                            </center>
                                 <br>
                                 <br>
-                                <div class="alert alert-success"><%= user.email %> </div>
+                                <div class="alert alert-success">
+                                    
                                 </div>
-                             </div>
-                           </div>
+                            
+                            </div>    
+
+                            <div class="cajaa2">
+                                <div class="datospersonales">
+                                    <label >Nombre : </label>
+                                    <h3 class="nombreprofile"><%= user.nombre %></h3> 
+
+                                    <label >Apellido : </label>
+                                    <h3> <%= user.apellido %></h3>
+
+                                    <label >Correo Electronico : </label>
+                                    <h3 class="emailprofile"><%= user.email %></h3>
+                                </div>
+                                
+                            </div>
+                           
                         </div>
                       </div>
                 </main>
