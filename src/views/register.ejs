@@ -33,7 +33,11 @@
                         
                     </div>
                     
-            
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="errores">
+                            <%= errors.email.msg %>
+                        </p>
+                        <% } %>
             
             
                 </div>

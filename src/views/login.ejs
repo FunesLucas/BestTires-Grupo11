@@ -21,12 +21,30 @@
                     <div>
                         <label>Recordame</label>
                         <input type="checkbox" name="recordame">
+                        <% if (locals.errors && errors.email){ %>
+                            <p class = "errores">
+                            <%= errors.email.msg %>
+                            
+                            </p>
+                        <% } %>
+                        <% if (locals.errors && errors.password) { %>
+                            <p class = "errores">
+                                <%= errors.password.msg %>
+                            </p>
+                        <% } %>
+
+                        
+                        
+                        
                     </div>
                     <input class="buttons" type="submit" name="" value="Ingresar">
-            
-                    <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
-            
+                    
+                    <p class="olvpass"><a href="#">¿Olvidastes tu Contraseña?</a></p>
+                    
+                    
+                   
                 </div>
+                
             </form>
         </div>
         <%- include("partials/footer") -%>

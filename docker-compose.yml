@@ -3,10 +3,10 @@ services:
    image: mysql:5.7
    environment:
      MYSQL_DATABASE: 'mydb'  
-     MYSQL_USER: 'besttires'
-     MYSQL_PASSWORD: '1234'
-     MYSQL_ROOT_PASSWORD: '1234'
-     MYSQL_ROOT_PASSWORD: '1234'
+     MYSQL_USER: 'franAdmin'
+     MYSQL_PASSWORD: 'Adrian12234..'
+     MYSQL_ROOT_PASSWORD: 'Adrian12234..'
+     MYSQL_ROOT_PASSWORD: 'Adrian12234..'
      
    volumes: 
        - ./volumenes/mysql:/var/lib/mysql 

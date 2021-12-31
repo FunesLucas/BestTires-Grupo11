@@ -636,7 +636,7 @@ footer {
  
  .form-login {
    width: 500px;
-   height: 340px;
+   
    background: #4e4d4d;
    margin: auto;
    margin-top: 90px;
@@ -831,7 +831,7 @@ footer {
    background-color: rgba(255, 99, 71, 0.644);
  }
  
- .form-login p{
+ .olvpass{
    height: 40px;
    text-align: center;
    border-bottom: 1px solid;

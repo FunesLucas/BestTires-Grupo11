@@ -30,6 +30,19 @@ const usuariosController = {
             });
         }
 
+        let usuarioExistente = await usuarioModel.findByField('email', req.body.email)
+
+        if (usuarioExistente) {
+            return res.render('register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body,
+            })
+        }
+
         let userToCreate = {
             avatar: req.file.filename,
             nombre: req.body.nombre,
@@ -83,22 +96,18 @@ const usuariosController = {
                 }
                 return res.redirect('/')
             }
-            
-            
-            
+
             
             return res.render('login', {
                 errors: {
-                    email: {
+                    password: {
                         msg: 'Las credenciales son invalidas'
                     }
+                   
                 }
             })
+            
         }
-        
-
-
-
         return res.render('login', {
             errors: {
                 email: {
@@ -106,8 +115,9 @@ const usuariosController = {
                 }
             }
         })
-        
-        
+            
+       
+
     },
 
     logout: (req, res) => {
