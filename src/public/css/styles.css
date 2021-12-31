@@ -1183,6 +1183,9 @@ ul{
    .barraUserProfile{
       display: none;
    }
+   .controlsunocaja{
+      height: auto;
+   }
    
 
 }

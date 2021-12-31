@@ -22,7 +22,7 @@ const usuariosController = {
     createUsuario: async (req, res, next) => {
         
         const resultValidation = validationResult(req)
-        console.log(resultValidation.mapped())
+        
         if (resultValidation.errors.length > 0) {
             return res.render('register', {
                 errors: resultValidation.mapped(),  //<---- mapped ( vuelve el Array de errores a un objeto literal)
