@@ -6,7 +6,8 @@ const productsController= require("../controllers/productsController");
 const upload = require ('../middleware/multermidd');
 const path = require ('path')
 const guestMiddleware = require ('../middleware/guestMiddleware');
-const authMiddleware = require ('../middleware/authMiddleware')
+const authMiddleware = require ('../middleware/authMiddleware');
+const validacionesUser = require('../middleware/validationsUserMiddleware');
 
 
 
@@ -77,7 +78,7 @@ router.post("/cargaProduc",upload.single('avatar') ,productos.crearProductoProcc
 router.get("/register",guestMiddleware, usersController.register);
 /*** PROCESA REGISTER ***/ 
 //router.post("/register",upload.single('img'),validations, usersController.processRegister);
-router.post("/register",upload.single('avatar'), usuarios.createUsuario);
+router.post("/register",upload.single('avatar'),validacionesUser, usuarios.createUsuario);
 
 
 /*** GET ONE PRODUCT ***/ 

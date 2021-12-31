@@ -568,10 +568,11 @@ footer {
    width: 70%;
    
 }
-.errores {
+.erroresregister {
    color:red;
+   margin-left: 20px;
+   font-size: 13px;
 }
-
 .datospersonales input{
    padding: 10px 30px;
    border: solid black 1px;
@@ -706,10 +707,20 @@ footer {
    font-size: 14px;
    font-weight: bold;
  }
+ .controlsuno{
+    width: 80%;
+ }
+ .controlsdos{
+    width: 80%;
+ }
+
+ .controlsunocaja{
+    height: 72px;
+ }
 
  .controls-register {
    width: 80%;
-   margin-bottom: 15px;
+  margin-bottom: 6px;
    padding: 11px 10px;
    background: rgb(225 225 225);
    font-size: 14px;
@@ -1101,12 +1112,8 @@ ul{
    .controls-register {
       width: 100%;
    }
-   .controlsuno {
-      width: 90%;
-   }
-   .controlsdos {
-      width: 90%;
-   }
+   
+   
    .productsDetails{
       display: flex;
       flex-direction: column;
