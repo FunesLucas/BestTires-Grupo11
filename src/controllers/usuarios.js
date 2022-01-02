@@ -22,15 +22,17 @@ const usuariosController = {
     },
 
     createUsuario: async (req, res, next) => {
+        
+        
         const resultValidation = validationResult(req)
-       
+        
         if (resultValidation.errors.length > 0) {
            return res.render('register', {
                 errors: resultValidation.mapped(),  //<---- mapped ( vuelve el Array de errores a un objeto literal)
                 oldData: req.body,
             });
         }
-
+        
         let usuarioExistente = await usuarioModel.findByField('email', req.body.email)
         if (usuarioExistente) {
             
@@ -43,7 +45,8 @@ const usuariosController = {
                 oldData: req.body,
             })
         }
-
+        
+        
         let userToCreate = {
             avatar: req.file.filename,
             nombre: req.body.nombre,
@@ -51,29 +54,47 @@ const usuariosController = {
             email: req.body.email,
             password: req.body.password
         }
-
+        
         try {
             
             const respuesta = await usuarioModel.createUsuario(userToCreate)
-            res.redirect('/')
+            res.redirect('/login')
+            
         } catch (error) {
             console.log(`fallo consulta a la base de datos ${error.message}`)
             return []
         }
         
+        
     },
 
     detalleUsuario: async (req, res, next) => {
+        
+        
+
         let id = req.params.id
         const respuesta = await db.usuarios.findByPk(id)
-        res.render('detalleUsuario', { user: respuesta });
+        res.render('detalleUsuario', {user:respuesta  });
 
     },
 
     editUsuario: async (req, res, next) => {
+
+        let id = req.params.id
+        const respuesta = await db.usuarios.findByPk(id)
+
+        const resultValidation = validationResult(req)
         
-        
+        if (resultValidation.errors.length > 0) {
+           return res.render('detalleUsuario', {
+            user:respuesta  ,
+                errors: resultValidation.mapped(),  //<---- mapped ( vuelve el Array de errores a un objeto literal)
+                oldData: req.body,
+            });
+        }
         try {
+
+
             let id = req.params.id
             const respuesta = await usuarioModel.editUsuario(id, req.body, req.file.filename)
             req.session.userLogged.avatar = req.file.filename
@@ -81,7 +102,7 @@ const usuariosController = {
             console.log(`fallo consulta a la base de datos ${error.message}`)
             return []
         }
-        res.redirect("/userProfile")
+        res.redirect("/userProfile" )
     },
 
     loginProcces: async (req, res) => {
@@ -97,7 +118,8 @@ const usuariosController = {
                 if (req.body.recordame != undefined) {
                     res.cookie('recordame', usuarioParaLogear.email, { maxAge: 60000 })
                 }
-                return res.redirect('/')
+                //return res.redirect('/')
+                return res.redirect('/userProfile')
 
             }
 

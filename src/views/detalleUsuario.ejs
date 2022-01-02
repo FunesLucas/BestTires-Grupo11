@@ -11,7 +11,7 @@
             
             <form action="/detalleUsuario/<%= user.ID %>?_method=PUT" method="POST" class="registro-form" enctype="multipart/form-data">
                 <div class="form-register">
-                    <h5>Crea tu Cuenta</h5>
+                    <h5>Editar informacion</h5>
 
                     <div class="input-register">
                         <div class="controlsuno">
@@ -27,7 +27,12 @@
                         <div class="exam">
                             <label>Avatar :</label>
                             <input type="file" name="avatar">
-                        </div>
+                            <% if (locals.errors && errors.avatar) { %>
+                                <p class = "erroreslogin">
+                                    <%= errors.avatar.msg %>
+                                </p>
+                            <% } %>
+                        </div> 
                        
                         <input class="buttons-register" type="submit" value="Editar">
                         

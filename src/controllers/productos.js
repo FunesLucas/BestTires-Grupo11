@@ -24,6 +24,7 @@ const productosController = {
         const respues = await db.marcas.findAll()
         const resultValidation = validationResult(req)
         
+        
         if (resultValidation.errors.length > 0) {
            return res.render('cargaProduc', {
                 marcas:respues,
@@ -31,7 +32,7 @@ const productosController = {
                 oldData: req.body,
             });
         }
-
+        
         let producToCreate = {
             avatar: req.file.filename,
             ancho: req.body.ancho,
@@ -44,7 +45,7 @@ const productosController = {
 
         const respuesta = await productosModel.crearProductoProcces(producToCreate)
         res.redirect ('products');
-
+       
         
     },
 
