@@ -578,6 +578,21 @@ footer {
    
    font-size: 13px;
 }
+.erroresCargaProduc {
+   color:red;
+   font-size: 13px;
+   margin-top: 3px;
+   width: 90%;
+   text-align: center;
+}
+
+.erroresCargaProducAvatar{
+   color:red;
+   font-size: 13px;
+   margin-top: 9px;
+   width: 90%;
+   text-align: center;
+}
 .erroresloginpass {
    color:red;
    margin-bottom: 8px;
@@ -616,6 +631,10 @@ footer {
 .exam {
    margin-left: 30px;
    padding: 10px;
+   height: 80px;
+}
+.cargaavatar{
+   margin-bottom: 3px;
 }
 
 
@@ -760,8 +779,8 @@ footer {
    .controls-cargaproduc{
       width: 70%;
      
-      margin-bottom: 15px;
-      padding: 11px 10px;
+      /*margin-bottom: 15px;*/
+      /*padding: 11px 10px;*/
       background: #707070;
       font-size: 14px;
       
@@ -770,6 +789,27 @@ footer {
       border: none;
       border-bottom: 1px solid;
       margin-right: 50px;
+      padding-top: 8px;
+   }
+   .controls-editProduc{
+      width: 70%;
+      background: #707070;
+      font-size: 14px;
+      
+      margin-left: 35px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid;
+      margin-right: 50px;
+      padding-top: 8px;
+      margin-bottom: 15px;
+      padding: 11px 10px;
+   }
+   .caja-controls-cargaproduc{
+      height: 50px;
+      width: 100%;
+      margin-left: 35px;
+
    }
    .controls-cargaproduc:-webkit-autofill,
    .controls-cargaproduc:-webkit-autofill:hover,

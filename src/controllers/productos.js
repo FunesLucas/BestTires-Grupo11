@@ -2,6 +2,8 @@
 const {productosModel} = require("../model");
 const db = require("../database/models");
 const { Association } = require("sequelize/dist");
+const {validationResult} = require ('express-validator');
+
 
 const productosController = { 
 
@@ -19,8 +21,17 @@ const productosController = {
     },
 
     crearProductoProcces : async (req,res,next) => {
-       console.log("hola")
-       console.log(req.body.marcas)
+        const respues = await db.marcas.findAll()
+        const resultValidation = validationResult(req)
+       
+        if (resultValidation.errors.length > 0) {
+           return res.render('cargaProduc', {
+                marcas:respues,
+                errors: resultValidation.mapped(),  //<---- mapped ( vuelve el Array de errores a un objeto literal)
+                oldData: req.body,
+            });
+        }
+
         let producToCreate = {
             avatar: req.file.filename,
             ancho: req.body.ancho,
@@ -33,6 +44,8 @@ const productosController = {
 
         const respuesta = await productosModel.crearProductoProcces(producToCreate)
         res.redirect ('products');
+
+        
     },
 
     detalleProducto: async (req,res,next) => {

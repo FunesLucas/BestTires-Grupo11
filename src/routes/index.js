@@ -8,6 +8,7 @@ const path = require ('path')
 const guestMiddleware = require ('../middleware/guestMiddleware');
 const authMiddleware = require ('../middleware/authMiddleware');
 const validacionesUser = require('../middleware/validationsUserMiddleware');
+const calidacionesProduct = require('../middleware/validationsProductMiddleware')
 
 
 
@@ -71,7 +72,7 @@ router.get("/carrito", productsController.carrito);
 /*** CREATE ONE PRODUCT ***/ 
 router.get("/cargaProduc",authMiddleware,productos.cargaProductos);
 
-router.post("/cargaProduc",upload.single('avatar') ,productos.crearProductoProcces);
+router.post("/cargaProduc",upload.single('avatar'),calidacionesProduct ,productos.crearProductoProcces);
 
 
 /*** REGISTER ***/ 
