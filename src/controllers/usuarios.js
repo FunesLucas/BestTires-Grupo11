@@ -20,19 +20,18 @@ const usuariosController = {
     },
 
     createUsuario: async (req, res, next) => {
-        
         const resultValidation = validationResult(req)
-        
+       
         if (resultValidation.errors.length > 0) {
-            return res.render('register', {
+           return res.render('register', {
                 errors: resultValidation.mapped(),  //<---- mapped ( vuelve el Array de errores a un objeto literal)
                 oldData: req.body,
             });
         }
 
         let usuarioExistente = await usuarioModel.findByField('email', req.body.email)
-
         if (usuarioExistente) {
+            
             return res.render('register', {
                 errors: {
                     email: {
@@ -80,43 +79,40 @@ const usuariosController = {
     },
 
     loginProcces: async (req, res) => {
-        let usuarioParaLogear = await usuarioModel.findByField('email', req.body.nameUsers);
-       
-        
+        let usuarioParaLogear = await usuarioModel.findByField('email', req.body.email);
 
         if (usuarioParaLogear) {
             //let okPassword = bcryptjs.compareSync(req.body.password, usuarioParaLogear.password)
             if (req.body.password == usuarioParaLogear.password) {
                 delete usuarioParaLogear.password;
                 req.session.userLogged = usuarioParaLogear;
-                //console.log(req.session);   <-- Para mostrar session 
-                
+                //console.log(req.session);    muestra sessin 
+
                 if (req.body.recordame != undefined) {
                     res.cookie('recordame', usuarioParaLogear.email, { maxAge: 60000 })
                 }
                 return res.redirect('/')
+
             }
 
-            
             return res.render('login', {
                 errors: {
                     password: {
-                        msg: 'Las credenciales son invalidas'
+                        msg: 'Password incorrecto'
                     }
-                   
                 }
             })
-            
-        }
+
+
+        } 
         return res.render('login', {
             errors: {
                 email: {
-                    msg: 'No se encuentra registrado'
+                    msg: 'Debe ingresar un correo electronico valido'
                 }
             }
         })
-            
-       
+           
 
     },
 

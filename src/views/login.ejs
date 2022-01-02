@@ -16,22 +16,26 @@
             <form action="/login" method="POST" class="registro-form">
                 <div class="form-login">
                     <h5>Iniciar Sesión</h5>
-                    <input class="controls" type="email" name="nameUsers" value="" placeholder="Usuario">
+                    <div class="controlsunocaja">
+                    <input class="controls" type="email" name="email" value="" placeholder="Usuario">
+                    <% if (locals.errors && errors.email) { %>
+                        <p class = "erroreslogin">
+                            <%= errors.email.msg %>
+                        </p>
+                    <% } %>
+                    </div>
                     <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <p class = "erroresloginpass">
+                            <%= errors.password.msg %>
+                        </p>
+                    <% } %>
                     <div>
                         <label>Recordame</label>
                         <input type="checkbox" name="recordame">
-                        <% if (locals.errors && errors.email){ %>
-                            <p class = "errores">
-                            <%= errors.email.msg %>
-                            
-                            </p>
-                        <% } %>
-                        <% if (locals.errors && errors.password) { %>
-                            <p class = "errores">
-                                <%= errors.password.msg %>
-                            </p>
-                        <% } %>
+                        
+
+                        
 
                         
                         

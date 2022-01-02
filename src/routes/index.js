@@ -46,7 +46,7 @@ const validations = [
 router.get("/", mainController.index);
 
 router.get("/login", guestMiddleware, usersController.login);
-router.post("/login", usuarios.loginProcces );
+router.post("/login",validacionesUser, usuarios.loginProcces );
 
 
 //router.get("/registerNuevo", usersController.registernuevo );

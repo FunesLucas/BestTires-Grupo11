@@ -573,6 +573,16 @@ footer {
    margin-left: 20px;
    font-size: 13px;
 }
+.erroreslogin {
+   color:red;
+   
+   font-size: 13px;
+}
+.erroresloginpass {
+   color:red;
+   margin-bottom: 8px;
+   font-size: 13px;
+}
 .datospersonales input{
    padding: 10px 30px;
    border: solid black 1px;
@@ -701,7 +711,7 @@ footer {
  .controls {
    width: 100%;
    border: 1px solid #9c6464;
-   margin-bottom: 15px;
+   margin-bottom: 6px;
    padding: 11px 10px;
    background: rgb(225 225 225);
    font-size: 14px;
@@ -1113,7 +1123,6 @@ ul{
       width: 100%;
    }
    
-   
    .productsDetails{
       display: flex;
       flex-direction: column;
@@ -1184,7 +1193,7 @@ ul{
       display: none;
    }
    .controlsunocaja{
-      height: auto;
+      height: 69px;
    }
    
 
