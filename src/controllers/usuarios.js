@@ -14,8 +14,10 @@ const usuariosController = {
     },
 
     profile: async (req, res, next) => {
+        
         let id = req.session.userLogged.ID
         const respuesta = await db.usuarios.findByPk(id)
+        
         res.render('userProfile', { user: respuesta })
     },
 
@@ -51,12 +53,14 @@ const usuariosController = {
         }
 
         try {
+            
             const respuesta = await usuarioModel.createUsuario(userToCreate)
             res.redirect('/')
         } catch (error) {
             console.log(`fallo consulta a la base de datos ${error.message}`)
             return []
         }
+        
     },
 
     detalleUsuario: async (req, res, next) => {
@@ -68,9 +72,11 @@ const usuariosController = {
 
     editUsuario: async (req, res, next) => {
         
+        
         try {
             let id = req.params.id
-            const respuesta = await usuarioModel.editUsuario(id, req.body)
+            const respuesta = await usuarioModel.editUsuario(id, req.body, req.file.filename)
+            req.session.userLogged.avatar = req.file.filename
         } catch (error) {
             console.log(`fallo consulta a la base de datos ${error.message}`)
             return []
@@ -80,7 +86,7 @@ const usuariosController = {
 
     loginProcces: async (req, res) => {
         let usuarioParaLogear = await usuarioModel.findByField('email', req.body.email);
-
+        
         if (usuarioParaLogear) {
             //let okPassword = bcryptjs.compareSync(req.body.password, usuarioParaLogear.password)
             if (req.body.password == usuarioParaLogear.password) {

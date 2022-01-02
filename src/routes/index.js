@@ -56,7 +56,7 @@ router.post("/login",validacionesUser, usuarios.loginProcces );
 
 router.get("/logout", usuarios.logout )
 router.get("/detalleUsuario/:id", usuarios.detalleUsuario)
-router.put("/detalleUsuario/:id",upload.single('avatar'),validations, usuarios.editUsuario)
+router.put("/detalleUsuario/:id",upload.single('avatar'), usuarios.editUsuario)
 
 router.get("/lista", productos.getProductos )
 router.get("/listaUsuarios", usuarios.getUsuario )

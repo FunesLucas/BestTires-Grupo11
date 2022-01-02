@@ -2,6 +2,7 @@ const db = require("../database/models")
 const bcryptjs = require ('bcryptjs')
 const usuariosController = require("../controllers/usuarios")
 const { response } = require("express")
+const req = require("express/lib/request")
 
 const usuarioModel = {
 
@@ -32,13 +33,14 @@ const usuarioModel = {
         return userFound;
     },
 
-    editUsuario: async (id, user) => {
-        console.log(user)
+    editUsuario: async (id, user, avatar) => {
+        
         try {
             const respuesta = await db.usuarios.findByPk(id)
             const response = await db.usuarios.update(
                 {
-                    ...user
+                    ...user,
+                    avatar:avatar
                 },
                 {
                     where: {
