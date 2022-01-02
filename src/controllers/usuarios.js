@@ -73,7 +73,8 @@ const usuariosController = {
         
 
         let id = req.params.id
-        const respuesta = await db.usuarios.findByPk(id)
+        //const respuesta = await db.usuarios.findByPk(id)
+        const respuesta = req.session.userLogged
         res.render('detalleUsuario', {user:respuesta  });
 
     },
@@ -90,10 +91,8 @@ const usuariosController = {
                 return []
             }
             res.redirect("/userProfile")
-        }
-
-        let id = req.params.id
-        const respuesta = await db.usuarios.findByPk(id)
+        }else {
+            const respuesta = req.session.userLogged
         return res.render('detalleUsuario', {
             user:respuesta,
             errors: {
@@ -102,6 +101,10 @@ const usuariosController = {
                 }
             }
         })
+        }
+
+        
+        
          
        
     },
