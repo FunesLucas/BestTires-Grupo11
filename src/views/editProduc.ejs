@@ -31,6 +31,11 @@
                         <div class="exam">
                             <label>Avatar :</label>
                             <input type="file" name="avatar">
+                            <% if (locals.errors && errors.avatar){ %>
+                                <p class = "erroresregister">
+                                <%= errors.avatar.msg %>
+                                </p>
+                            <% } %>
                         </div>
                         <input class="buttons-register" type="submit" value="Enviar">
 

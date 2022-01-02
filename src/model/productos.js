@@ -45,14 +45,15 @@ const productosModel = {
         return response
     },
 
-    editProductoProccess : async (id, producto) => {
+    editProductoProccess : async (id, producto, avatar) => {
         console.log(producto)
         console.log(id)
         try {
             const respuesta = await db.productos.findByPk(id)
             const response = await db.productos.update(
                 {
-                    ...producto
+                    ...producto,
+                    avatar: avatar
                 },
                 {
                     where: {

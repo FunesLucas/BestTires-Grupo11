@@ -61,7 +61,6 @@ const productosController = {
 
     editProducto: async (req,res,next) => {
         let id = req.params.id
-
         const respuesta = await productosModel.editProducto(id)
         const response = await db.marcas.findAll()
         //const respuesta = await db.productos.findByPk(id)
@@ -71,14 +70,30 @@ const productosController = {
     editProductoProccess: async (req, res, next) => {
         //console.log(req.body)
         //console.log(req.params.id)
-        try {
-            let id = req.params.id
-            const respuesta = await productosModel.editProductoProccess(id, req.body)
-        } catch (error) {
-            console.log(`fallo consulta a la base de datos ${error.message}`)
-            return []
+
+        if (req.file !== undefined){
+            try {
+                let id = req.params.id
+                const respuesta = await productosModel.editProductoProccess(id, req.body, req.file.filename)
+            } catch (error) {
+                console.log(`fallo consulta a la base de datos ${error.message}`)
+                return []
+            }
+            res.redirect("/products")
         }
-        res.redirect("/products")
+
+        let id = req.params.id
+        const respuesta = await productosModel.editProducto(id)
+
+        return res.render('editProduc', {
+            products:respuesta,
+            errors: {
+                avatar:{
+                    msg: "tienes que subir una imagen"
+                }
+            }
+        })
+        
     },
 
     delete: async (req,res,next) => {

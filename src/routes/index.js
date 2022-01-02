@@ -55,7 +55,7 @@ router.post("/login",validacionesUser, usuarios.loginProcces );
 
 
 router.get("/logout", usuarios.logout )
-router.get("/detalleUsuario/:id",authMiddleware,usuarios.detalleUsuario)
+router.get("/detalleUsuario/:id",usuarios.detalleUsuario)
 router.put("/detalleUsuario/:id",authMiddleware,upload.single('avatar'),validacionesUser, usuarios.editUsuario)
 
 router.get("/lista", productos.getProductos )
