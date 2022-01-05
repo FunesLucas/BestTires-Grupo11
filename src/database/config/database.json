@@ -19,7 +19,7 @@
   "production": {
     "username": "franAdmin",
     "password": "Adrian12234..",
-    "database": "mydb",
+    "database": "BestTires",
     "host": "45.79.201.214",
     "dialect": "mysql"
   }

@@ -17,19 +17,27 @@
                         <div class="controlsuno">
                             <div  class="controlsunocaja">
                                 <input class="controls-register" type="text" name="nombre" value="<%= locals.oldData ? oldData.nombre : null  %>" placeholder="Nombre">
+                                
                                 <% if (locals.errors && errors.nombre){ %>
                                     <p class = "erroresregister">
                                     <%= errors.nombre.msg %>
                                     </p>
-                                <% } %>
+                                    <% } else {%>
+                                        <div class="error-front-register-nombre"></div>
+                                        <% } %>
                             </div>
                             <div>
-                                <input class="controls-register" type="text" name="apellido" value="<%= locals.oldData ? oldData.apellido : null  %>" placeholder="Apellido">
+                                <input class="controls-register-apellido" type="text" name="apellido" value="<%= locals.oldData ? oldData.apellido : null  %>" placeholder="Apellido">
+                                
                                 <% if (locals.errors && errors.apellido){ %>
                                     <p class = "erroresregister">
                                     <%= errors.apellido.msg %>
                                     </p>
-                                <% } %>
+                                    <% } else {%>
+                                        <div class="error-front-register-apellido"></div>
+                                        <% } %>
+
+                                        
                             </div>
                         </div>
                         <div class="controlsdos">
@@ -42,12 +50,14 @@
                                 <% } %>
                             </div>
                             <div>
-                                <input class="controls-register" type="password" name="password" value="" placeholder="Password">
+                                <input class="controls-register-contraseña" type="password" name="password" value="" placeholder="Password">
                                 <% if (locals.errors && errors.password){ %>
                                     <p class = "erroresregister">
                                     <%= errors.password.msg %>
                                     </p>
-                                <% } %>
+                                    <% } else { %>
+                                    <div class="error-front-register-contraseña"></div>
+                                    <% } %>
                             </div>
                         </div>
                     </div>
@@ -70,7 +80,7 @@
             </form>
         </div>
         <%- include("partials/footer") -%>
-
+        <script src="/js/register-form.js"></script>
     </body>
 
 </html>

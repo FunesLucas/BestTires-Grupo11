@@ -16,16 +16,16 @@
             
                     <div>
                         <div class="caracteristicas">
-                            <input class="labModelo" type="text" placeholder="Modelo:">
+                            <input class="labModelo" type="text" placeholder="Modelo:" readonly>
                             <div class="caja-controls-cargaproduc">
-                            <input class="controls-cargaproduc" type="text" name="model" value="<%= locals.oldData ? oldData.model : null  %>" placeholder="">
+                            <input class="controls-cargaproduc" type="text" name="model" value="<%= locals.oldData ? oldData.model : null  %>" placeholder="" >
                             <% if (locals.errors && errors.model) { %>
                                 <p class = "erroresCargaProduc">
                                     <%= errors.model.msg %>
                                 </p>
                             <% } %>
                              </div>
-                            <input class="labModelo" type="text" placeholder="Fabricante:">
+                            <input class="labModelo" type="text" placeholder="Fabricante:" readonly>
                             <select class="marca" name="marcas">
                                 
                                 <% for (let i=0; i < marcas.length; i++) { %>
@@ -41,7 +41,7 @@
                         
                         
                         
-                            <input class="labModelo" type="text" placeholder="Ancho:">
+                            <input class="labModelo" type="text" placeholder="Ancho:" readonly>
                             <div class="caja-controls-cargaproduc">
                             <input class="controls-cargaproduc" type="text" name="ancho" value="<%= locals.oldData ? oldData.ancho : null  %>" placeholder="">
                             <% if (locals.errors && errors.ancho) { %>
@@ -50,7 +50,7 @@
                                 </p>
                             <% } %>
                             </div>
-                            <input class="labModelo" type="text" placeholder="Perfil:">
+                            <input class="labModelo" type="text" placeholder="Perfil:" readonly>
                             <div class="caja-controls-cargaproduc">
                             <input class="controls-cargaproduc" type="text" name="perfil" value="<%= locals.oldData ? oldData.perfil : null  %>" placeholder="">
                             <% if (locals.errors && errors.perfil) { %>
@@ -59,7 +59,7 @@
                                 </p>
                             <% } %>
                             </div>
-                            <input class="labModelo" type="text" placeholder="Rodado:">
+                            <input class="labModelo" type="text" placeholder="Rodado:" readonly>
                             <div class="caja-controls-cargaproduc">
                             <input class="controls-cargaproduc" type="text" name="rodado" value="<%= locals.oldData ? oldData.rodado : null  %>" placeholder="">
                             <% if (locals.errors && errors.rodado) { %>
@@ -68,7 +68,7 @@
                                 </p>
                             <% } %>
                             </div>
-                            <input class="labModelo" type="text" placeholder="Precio:">
+                            <input class="labModelo" type="text" placeholder="Precio:" readonly>
                             <div class="caja-controls-cargaproduc">
                             <input class="controls-cargaproduc" type="text" name="precio" value="<%= locals.oldData ? oldData.precio : null  %>" placeholder="">
                             <% if (locals.errors && errors.precio) { %>

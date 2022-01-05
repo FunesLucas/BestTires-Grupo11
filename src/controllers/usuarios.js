@@ -81,7 +81,8 @@ const usuariosController = {
 
     editUsuario: async (req, res, next) => {
 
-        if (req.file !== undefined){
+        if (req.file !== undefined) {
+
             try {
                 let id = req.params.id
                 const respuesta = await usuarioModel.editUsuario(id, req.body, req.file.filename)
@@ -91,16 +92,17 @@ const usuariosController = {
                 return []
             }
             res.redirect("/userProfile")
-        }else {
+
+        } else {
             const respuesta = req.session.userLogged
-        return res.render('detalleUsuario', {
-            user:respuesta,
-            errors: {
-                avatar:{
-                    msg: "tienes que subir una imagen"
+            return res.render('detalleUsuario', {
+                user: respuesta,
+                errors: {
+                    avatar: {
+                        msg: "Debes seleccionar una Imagen !"
+                    }
                 }
-            }
-        })
+            })
         }
 
         
@@ -128,6 +130,7 @@ const usuariosController = {
             }
 
             return res.render('login', {
+                oldData:req.body,
                 errors: {
                     password: {
                         msg: 'Password incorrecto'
@@ -138,9 +141,10 @@ const usuariosController = {
 
         } 
         return res.render('login', {
+            oldData:req.body,
             errors: {
                 email: {
-                    msg: 'Debe ingresar un correo electronico valido'
+                    msg: 'El correo electronico no se encuentra registrado!'
                 }
             }
         })

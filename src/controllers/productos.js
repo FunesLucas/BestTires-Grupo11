@@ -89,7 +89,7 @@ const productosController = {
             products:respuesta,
             errors: {
                 avatar:{
-                    msg: "tienes que subir una imagen"
+                    msg: "Debes Seleccionar una Imagen!"
                 }
             }
         })

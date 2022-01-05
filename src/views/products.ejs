@@ -14,23 +14,23 @@
                         <div class="right-containerProduclista">
                             <div class="header">
                                 
-                                <h3>PRODUCTOS </h3>
-                               <!-- 
-                                   // Recorro variable de products, e imprimo cada marca correspondiente a dicho producto //
+                                <h3 class="titulo-product">PRODUCTOS </h3>
+                               
+                                <!-- // Recorro variable de products, e imprimo cada marca correspondiente a dicho producto // -->
                                 
-                                <% for (let i = 0; i < products.length; i++) { %>
+                                <!-- <% for (let i = 0; i < products.length; i++) { %>
                                     <% if (products[i].marca) { %>
                                         <%= products[i].marca.nombre %>
                                     <% } %>
-                                    <% } %> 
+                                    <% } %> -->
                                 
-                                -->
+                           
                             </div>
 
                             <div class="productos">
-                                <% products.forEach(function(product){ %> <!--Recordar que product es cada elemento de la lista-->
+                                <% products.forEach(function(product ){ %> <!--Recordar que product es cada elemento de la lista-->
                                     <!--productCard-->
-                                    <%- include('partials/productCards', {product}) %>
+                                    <%- include('partials/productCards', {product} ) %>
                                     <!--/productCard-->
                                     <% }); %>
                                

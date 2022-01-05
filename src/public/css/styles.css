@@ -51,6 +51,10 @@ ul {
  .containerProductId{
     flex: 1;
  }
+ .tit-productCards{
+    color: black;
+    text-align: center;
+ }
  .container-product {
    flex: 1; 
    background-color: rgb(255, 255, 255);
@@ -61,9 +65,9 @@ ul {
    padding: 50px;
  }
  .container-productProfile {
-    flex:1;
-    padding: 50px;
- }
+   flex:1;
+   padding: 50px;
+}
 /*menu*/
 
 .nav-main {
@@ -227,7 +231,7 @@ section a img {
 .productos {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-around;  
+   justify-content: center;  
 }
 .box-products {    
    background-color: white;
@@ -239,6 +243,7 @@ section a img {
    padding: 20px;
    box-shadow: 0px 0px 5px rgb(100 100 100);
    margin-top:40px;
+   height: 320px;
 }
 .box-products ul {
    border-top: 2px solid rgb(68, 3, 3);
@@ -446,13 +451,10 @@ footer {
  }
  .right-containerProduclista{
    padding: 5px;
-   width: 60%;
-  
+   
    margin: auto;
    border-radius: 10px;
-   
-   
- }
+   }
 
 
  /*carrito*/
@@ -575,7 +577,27 @@ footer {
    margin-left: 20px;
    font-size: 13px;
 }
+.error-front-register-contraseña {
+   color:red;
+   margin-left: 20px;
+   font-size: 13px;
+}
+.error-front-register-nombre {
+   color:red;
+   margin-left: 20px;
+   font-size: 13px;
+}
+.error-front-register-apellido {
+   color:red;
+   margin-left: 20px;
+   font-size: 13px;
+}
 .erroreslogin {
+   color:red;
+   
+   font-size: 13px;
+}
+.error-front-email {
    color:red;
    
    font-size: 13px;
@@ -600,13 +622,20 @@ footer {
    margin-bottom: 8px;
    font-size: 13px;
 }
+.error-front-contraseña {
+   color:red;
+   margin-bottom: 8px;
+   font-size: 13px;
+}
 .datospersonales input{
    padding: 10px 30px;
    border: solid black 1px;
 }
 
 /*carga producto*/
-
+.titulo-product{
+   color: white;
+}
 .datosProduct {
   
    flex-direction: column;
@@ -738,6 +767,24 @@ footer {
    font-size: 14px;
    font-weight: bold;
  }
+ .controlspass {
+   width: 100%;
+   border: 1px solid #9c6464;
+   margin-bottom: 6px;
+   padding: 11px 10px;
+   background: rgb(225 225 225);
+   font-size: 14px;
+   font-weight: bold;
+ }
+ .controlsLogin{
+   width: 100%;
+   border: 1px solid #9c6464;
+   margin-bottom: 6px;
+   padding: 11px 10px;
+   background: rgb(225 225 225);
+   font-size: 14px;
+   font-weight: bold;
+ }
  .controlsuno{
     width: 80%;
  }
@@ -751,7 +798,7 @@ footer {
 
  .controls-register {
    width: 80%;
-  margin-bottom: 6px;
+   margin-bottom: 6px;
    padding: 11px 10px;
    background: rgb(225 225 225);
    font-size: 14px;
@@ -760,6 +807,41 @@ footer {
    outline: none;
    border: none;
    border-bottom: 1px solid;
+   }
+
+.controls.controls-register-contraseña::placeholder{
+   color:black;
+}
+.controls-register-contraseña {
+   width: 80%;
+   margin-bottom: 6px;
+   padding: 11px 10px;
+   background: rgb(225 225 225);
+   font-size: 14px;
+   font-weight: bold;
+   margin-left: 20px;
+   outline: none;
+   border: none;
+   border-bottom: 1px solid;
+}
+.controls-register-contraseña::placeholder{
+   color: black;
+}
+.controls-register-apellido {
+   width: 80%;
+   margin-bottom: 6px;
+   padding: 11px 10px;
+   background: rgb(225 225 225);
+   font-size: 14px;
+   font-weight: bold;
+   margin-left: 20px;
+   outline: none;
+   border: none;
+   border-bottom: 1px solid;
+   }
+
+   .controls-register-apellido::placeholder{
+      color: black;
    }
    .imagenproductid{
       width: 450px;
@@ -933,10 +1015,14 @@ footer {
    font-size: 4.5rem;
 
 }
+.fas.fa-star{
+   color: rgb(227 227 19);
+}
 .titdescripcion{
    border-bottom: 2px solid;
    width: 95%;
    text-align: center;
+   padding-bottom: 10px;
 }
 .titdescripcion p {
    margin-top: 10px;
@@ -1090,6 +1176,7 @@ ul{
     .form-cargaproduc {
        width: 300px;
        min-width: 280px;
+       background-color: #4e4d4d;
     }
     .navbar-nav-login{
        display: none;
@@ -1213,11 +1300,12 @@ ul{
       display: flex;
       flex-direction: column;
       min-width: 0;
-      width: 70%;
-      min-width: 230px
+      min-width: 340px;
+      max-width: 390px;
+      
    }
    .imgprofile {
-      width: 80%;
+      
       margin-left: 0;
    }
    .datospersonales h3 {
@@ -1250,7 +1338,19 @@ ul{
    .controlsunocaja{
       height: 69px;
    }
-   
+   .container-productProfile {
+      flex:1;
+      padding: 50px 0px;
+   }
+   .container-product {
+      flex: 1; 
+      background-color: rgb(0, 0, 0);
+         background-image: none;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: 70%;
+      padding: 50px;
+    }
 
 }
 

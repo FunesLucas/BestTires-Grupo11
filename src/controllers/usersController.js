@@ -51,7 +51,7 @@ const usersController = {
     },
     
     login:(req, res) => {
-        console.log(req.session);
+        
        res.render('login');
     },
 

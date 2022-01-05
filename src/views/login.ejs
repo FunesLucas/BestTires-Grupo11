@@ -13,23 +13,31 @@
             <%- include("partials/header") -%>
             <hr>
 
-            <form action="/login" method="POST" class="registro-form">
+            <form action="/login" method="POST" class="login-form">
+                
                 <div class="form-login">
                     <h5>Iniciar Sesión</h5>
                     <div class="controlsunocaja">
-                    <input class="controls" type="email" name="email" value="" placeholder="Usuario">
+                    <input class="controls"  name="email" value="<%= locals.oldData ? oldData.email : null  %>" placeholder="Usuario">
+                    
                     <% if (locals.errors && errors.email) { %>
                         <p class = "erroreslogin">
                             <%= errors.email.msg %>
                         </p>
-                    <% } %>
+                        <% } else {%>
+                            <div class="error-front-email"></div>
+                        <% }%>
+                        
                     </div>
-                    <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
+                    <input class="controlspass" type="password" name="password" value="" placeholder="Contraseña">
+                    
                     <% if (locals.errors && errors.password) { %>
                         <p class = "erroresloginpass">
                             <%= errors.password.msg %>
                         </p>
-                    <% } %>
+                        <% } else { %>
+                            <div class="error-front-contraseña"></div>
+                            <% }  %>
                     <div>
                         <label>Recordame</label>
                         <input type="checkbox" name="recordame">
@@ -52,7 +60,7 @@
             </form>
         </div>
         <%- include("partials/footer") -%>
-
+        <script src="/js/login-form.js"></script>
     </body>
 
 </html>
