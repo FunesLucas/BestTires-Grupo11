@@ -12,8 +12,9 @@ const calidacionesProduct = require('../middleware/validationsProductMiddleware'
 
 
 
-const {usuarios}= require('../controllers')
+const {usuarios, apiProduct}= require('../controllers')
 const {productos}= require('../controllers')
+const {apiUser} = require('../controllers')
 
 const {body} = require ('express-validator');
 const { createUsuario } = require('../model/usuarios');
@@ -99,4 +100,13 @@ router.get("/check", function (req,res){
         res.send('el usuario logeado es' + " " + req.session.userLogged.email)
     }
 });
+
+//API Rutas user
+router.get('/api/users', apiUser.listado);
+router.get('/api/users/:id', apiUser.usuarioId )
+
+//API Rutas products
+router.get('/api/products', apiProduct.listado);
+router.get('/api/products/:id', apiProduct.productoiD )
+
 module.exports = router;

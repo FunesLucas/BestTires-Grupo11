@@ -27,10 +27,10 @@ const usuariosController = {
         const resultValidation = validationResult(req)
         
         if (resultValidation.errors.length > 0) {
-           return res.render('register', {
-                errors: resultValidation.mapped(),  //<---- mapped ( vuelve el Array de errores a un objeto literal)
-                oldData: req.body,
-            });
+            return res.render('register', {
+                 errors: resultValidation.mapped(),  //<---- mapped ( vuelve el Array de errores a un objeto literal)
+                 oldData: req.body,
+             });
         }
         
         let usuarioExistente = await usuarioModel.findByField('email', req.body.email)

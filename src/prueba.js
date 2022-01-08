@@ -1,7 +1,7 @@
-const bcryptjs = require('bcryptjs')
+let errores = {
+   
+}
 
-let pass = "hola"
-
-let passhas = bcryptjs.hashSync(pass, 10)
-
-console.log(passhas)
+if (Object.keys(errores).length < 1){
+    console.log("tiene errores")
+}
