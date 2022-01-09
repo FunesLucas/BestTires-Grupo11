@@ -109,6 +109,8 @@ router.get('/api/users/:id', apiUser.usuarioId )
 //API Rutas products
 router.get('/api/products', apiProduct.listado);
 router.get('/api/products/:id', apiProduct.productoiD);
+
+//API Ruta fabricantes
 router.get('/api/fabricantes', apiFabricantes.listado);
 
 
