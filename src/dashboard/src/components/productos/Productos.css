@@ -1,0 +1,26 @@
+h3 {
+    text-align: center;
+    padding-top: 10px;
+}
+p {
+    margin-left: 190px;
+    padding-bottom: 10px;
+}
+.container-productos{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.container-tot-productos{
+    width: 650px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid white;
+}
+.container-ult-producto{
+    width: 650px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid white;
+}
