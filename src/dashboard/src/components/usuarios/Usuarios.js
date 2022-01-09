@@ -48,10 +48,10 @@ import { Component } from "react";
                       <div className='container-usuarios'>
 
                           <div className='container-tot-usuarios'>
-                              <h3>Cantidad de Usuarios</h3> {contenido}
+                              <h3>Cantidad de Usuarios</h3> <h5>{contenido}</h5>
                           </div>
                           <div className='container-ult-usuario'>
-                              <h3>Ultimo usuario creado</h3> {ultimoUsuario}
+                              <h3>Ultimo usuario creado</h3> <h5>{ultimoUsuario}</h5>
                           </div>
 
 
@@ -63,11 +63,6 @@ import { Component } from "react";
           );
         }
       }
-
-
-
-
-   
 
 
 export default Usuarios;

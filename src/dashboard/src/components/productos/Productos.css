@@ -2,6 +2,10 @@ h3 {
     text-align: center;
     padding-top: 10px;
 }
+h5{
+    text-align: center;
+    margin-top: 20px;
+}
 p {
     margin-left: 190px;
     padding-bottom: 10px;
@@ -23,4 +27,12 @@ p {
     height: 100px;
     margin: auto;
     border: 1px solid white;
+}
+.ult-producto {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+.ult-producto h5{
+   margin-left: 3px;
 }

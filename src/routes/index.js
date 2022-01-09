@@ -13,8 +13,9 @@ const calidacionesProduct = require('../middleware/validationsProductMiddleware'
 
 
 const {usuarios, apiProduct}= require('../controllers')
-const {productos}= require('../controllers')
-const {apiUser} = require('../controllers')
+const {productos}= require('../controllers');
+const {apiUser} = require('../controllers');
+const {apiFabricantes} = require('../controllers')
 
 const {body} = require ('express-validator');
 const { createUsuario } = require('../model/usuarios');
@@ -107,6 +108,8 @@ router.get('/api/users/:id', apiUser.usuarioId )
 
 //API Rutas products
 router.get('/api/products', apiProduct.listado);
-router.get('/api/products/:id', apiProduct.productoiD )
+router.get('/api/products/:id', apiProduct.productoiD);
+router.get('/api/fabricantes', apiFabricantes.listado);
+
 
 module.exports = router;
