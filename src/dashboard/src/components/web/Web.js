@@ -5,8 +5,10 @@ import "./Web.css"
 
 function Web() {
     return (
+        
         <div>
-            <Encabezado />
+            
+            <h1 className='web'>BestTires</h1>
             <Main />
         </div>
      );

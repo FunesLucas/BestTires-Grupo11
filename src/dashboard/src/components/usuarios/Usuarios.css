@@ -8,6 +8,8 @@ h5{
 }
 p {
     padding-bottom: 10px;
+    font-size: 23px;
+    color: #ffd14e;
 }
 .container-usuarios{
     display: flex;
@@ -20,11 +22,20 @@ p {
     height: 100px;
     margin: auto;
     border: 1px solid white;
+    background-color: #000000e8;
     
+}
+.container-tot-usuarios h3 {
+    color: #ffd14e;
 }
 .container-ult-usuario{
     width: 650px;
     height: 100px;
     margin: auto;
     border: 1px solid white;
+    background-color: #000000e8;
+    margin-left: 10px;
+}
+.container-ult-usuario h3{
+    color: #ffd14e;
 }

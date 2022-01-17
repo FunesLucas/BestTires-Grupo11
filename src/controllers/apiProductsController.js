@@ -24,6 +24,7 @@ const controller = {
             res.status(200).json({
                 count: productos.length,
                 data: listadoProductos,
+                status: 200
                });
         } catch (error) {
             res.status(500)
@@ -47,7 +48,9 @@ const controller = {
                 perfil: productos.perfil,
                 rodado: productos.rodado,
                 precio: productos.precio,
-                image: "localhost:3000/img/"+productos.avatar,
+                image:{
+                  url:`../img/${productos.avatar}`
+                } 
               }
             });
       

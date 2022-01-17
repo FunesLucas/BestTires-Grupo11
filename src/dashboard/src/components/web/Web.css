@@ -1,4 +1,9 @@
 h1 {
-    font-size: 60px;
+    font-size: 90px;
     text-align: center;
+    padding: 20px;
+    background-color: black;
+}
+.web{
+    color: tomato;
 }

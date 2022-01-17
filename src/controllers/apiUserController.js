@@ -22,6 +22,7 @@ const controller = {
             res.status(200).json({
                 count: usuarios.length,
                 data: listadoUsuarios,
+                status:200
                });
         } catch (error) {
             res.status(500)
@@ -40,7 +41,9 @@ const controller = {
                 name: usuarios.nombre,
                 lastName: usuarios.apellido,
                 email: usuarios.email,
-                image: usuarios.avatar,
+                image: {
+                  url: `../img/${usuarios.avatar}`
+                }
               }
             });
       

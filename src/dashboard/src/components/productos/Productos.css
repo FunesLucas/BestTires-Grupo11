@@ -1,6 +1,7 @@
 h3 {
     text-align: center;
     padding-top: 10px;
+
 }
 h5{
     text-align: center;
@@ -9,6 +10,9 @@ h5{
 p {
     margin-left: 190px;
     padding-bottom: 10px;
+    font-size: 23px;
+    color: #ffd14e;
+    font-weight: bold;
 }
 .container-productos{
     display: flex;
@@ -21,12 +25,21 @@ p {
     height: 100px;
     margin: auto;
     border: 1px solid white;
+    background-color: #000000e8;
+}
+.container-tot-productos h3{
+    color: #ffd14e;
 }
 .container-ult-producto{
     width: 650px;
     height: 100px;
     margin: auto;
     border: 1px solid white;
+    background-color: #000000e8;
+    margin-left: 10px;
+}
+.container-ult-producto h3{
+    color: #ffd14e;
 }
 .ult-producto {
     display: flex;

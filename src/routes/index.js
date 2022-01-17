@@ -114,4 +114,6 @@ router.get('/api/products/:id', apiProduct.productoiD);
 router.get('/api/fabricantes', apiFabricantes.listado);
 
 
+
+
 module.exports = router;

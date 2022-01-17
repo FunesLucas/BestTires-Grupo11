@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .fa-bars{
+                color: orange;
+                font-size: 20px;
+                margin: 30px;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            .hamburguesa-button li a {
+                background-color: pink;
+                width: 300px;
+                display: block;
+                padding: 10px 15px;
+                text-decoration: none;
+                
+               
+            }
+            .hamburguesa-button{
+                display: none;
+            }
+            
+            .hamburguesa-button-enable{
+                display:block;
+            }
+            
+
+        </style>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    </head>
+
+<body>
+    <div>
+        <div class="boton-hambur">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <ul class="hamburguesa-button">
+            <li><a href="/"> Inicio </a></li>
+            <li><a href="/products"> Productos </a></li>
+            <li><a href="/login"> Loguearse </a></li>
+        </ul>
+    </div>
+        
+    
+    <script src="/js/button-hamburguesa.js"></script>
+</body>
+
+</html>

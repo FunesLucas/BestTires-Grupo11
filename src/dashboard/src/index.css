@@ -2,8 +2,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: black;
   color: white;
-}
 
+  
+}
+.index{
+  background-image: url(https://noticias.coches.com/wp-content/uploads/2017/10/neumatico-All-Season.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70%;
+  padding-bottom: 18px;
+  padding-bottom: 185px;
+  
+}
 

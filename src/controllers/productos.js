@@ -23,7 +23,7 @@ const productosController = {
     crearProductoProcces : async (req,res,next) => {
         const respues = await db.marcas.findAll()
         const resultValidation = validationResult(req)
-        
+        console.log(req.file)
         
         if (resultValidation.errors.length > 0) {
            return res.render('cargaProduc', {

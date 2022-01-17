@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-app.use(express.static(path.join(__dirname, "./public")));
+
 const rutasIndex = require("./routes/index.js");
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
 const userLoggedmidd = require('./middleware/userLoggedmidd');
 const cookieparser = require ('cookie-parser')
 const cors = require ("cors")
+app.use(cors());
 
 const session = require('express-session'); // 
 const { cookie } = require("express-validator");
@@ -33,7 +34,7 @@ app.set('views', path.join(__dirname,'./views'))
 app.use(cookieparser())
 app.use(userLoggedmidd);
 app.use('/', rutasIndex);
-app.use(cors());
+app.use(express.static(path.join(__dirname, "./public")));
 
 
 

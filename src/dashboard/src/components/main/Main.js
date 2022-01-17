@@ -4,13 +4,15 @@ import Productos from '../productos/Productos';
 import Fabricantes from '../fabricantes/Fabricantes';
 
 
+import './Main.css';
+
 function Main() {
     return (
         <div>
+        
             <Usuarios />
             <Productos />
             <Fabricantes />
-            
         </div>
      );
   }
