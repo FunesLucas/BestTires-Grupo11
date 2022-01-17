@@ -12,7 +12,7 @@ import { Component } from "react";
         }
       
         componentWillMount() {
-          fetch("http://localhost:3001/api/fabricantes")
+          fetch("https://besttires.herokuapp.com/api/fabricantes")
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
